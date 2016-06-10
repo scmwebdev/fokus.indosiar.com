@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	font: 400 16px "Roboto Condensed",Helvetica,Arial,sans-serif;
 }
 
 *,
@@ -36,3 +37,7 @@ img {
 }
 
 @import "tables";
+
+.sr-only {
+	display: none;
+}

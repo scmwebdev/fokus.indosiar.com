@@ -22,26 +22,20 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site page-<?php echo strtolower(get_the_title()); ?>">
+	<div class="site-header-line">
+		<span class="red"></span>
+		<span class="green"></span>
+		<span class="blue"></span>
+	</div>
+	<div class="<?php echo (is_mobile()) ? '' : 'container-fluid'; ?>">
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-header-line">
-			<span class="red"></span>
-			<span class="green"></span>
-			<span class="blue"></span>
-		</div>
 		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
-
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
+			<div class="logo-container">
+                <h1>
+                    <a href="/"><img src="http://www.indosiar.com/assets/img/logo-indosiar.png" style="max-height: 70px;"></a>
+                    <span class="sr-only">Indosiar</span>
+                </h1>
+            </div>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">

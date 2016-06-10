@@ -36,7 +36,7 @@ gulp.task('browserSync', function() {
 });
 
 gulp.task('sass', function() {
-    return gulp.src( path + '/sass/style.scss')
+    return gulp.src(path + '/sass/style.scss')
         .pipe(plumber({
             errorHandler: function (err) {
                 console.log(err);
@@ -54,6 +54,7 @@ gulp.task('sass', function() {
 gulp.task('js', function() {
     return gulp.src([
             './node_modules/jquery/dist/jquery.js',
+            './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
             './node_modules/fastclick/lib/*.js',
             './node_modules/slick-carousel/slick/slick.js',
             './node_modules/jquery-match-height/dist/jquery.matchHeight.js',
@@ -85,8 +86,11 @@ gulp.task('utility', function(){
     // move font_awesome fonts to themes root folder
     var font_awesome = gulp.src('node_modules/font-awesome/fonts/**/*')
         .pipe(gulp.dest('sneaky/wp-content/themes/fonts/'))
-        
-    return merge(slick_fonts, ajax_loader, kodein_sass, font_awesome);
+
+    var bootstrap_front = gulp.src('node_modules/bootstrap-sass/assets/fonts/bootstrap/*')
+        .pipe(gulp.dest('sneaky/wp-content/themes/fonts/'))
+
+    return merge(slick_fonts, ajax_loader, kodein_sass, font_awesome, bootstrap_font);
 })
 
 // Copy env.php from wp-content to the themes folder
