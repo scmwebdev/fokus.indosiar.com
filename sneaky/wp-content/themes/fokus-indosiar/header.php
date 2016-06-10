@@ -27,21 +27,22 @@
 		<span class="green"></span>
 		<span class="blue"></span>
 	</div>
-	<div class="<?php echo (is_mobile()) ? '' : 'container-fluid'; ?>">
+	
 	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<div class="logo-container">
-                <h1>
-                    <a href="/"><img src="http://www.indosiar.com/assets/img/logo-indosiar.png" style="max-height: 70px;"></a>
-                    <span class="sr-only">Indosiar</span>
-                </h1>
-            </div>
-		</div><!-- .site-branding -->
+		<div class="<?php echo (is_mobile()) ? '' : 'container-fluid'; ?>">
+			<div class="site-branding left">
+				<div class="logo-container">
+	                <h1>
+	                    <a href="/"><img src="http://www.indosiar.com/assets/img/logo-indosiar.png" style="max-height: 70px;"></a>
+	                    <span class="sr-only">Indosiar</span>
+	                </h1>
+	            </div>
+			</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'fokus-indosiar' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
+			<nav id="site-navigation" class="main-navigation right" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

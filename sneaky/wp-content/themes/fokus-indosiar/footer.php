@@ -20,7 +20,7 @@
 			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'fokus-indosiar' ), 'fokus-indosiar', '<a href="http://underscores.me/" rel="designer">Gamal</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-	</div> <!-- page container -->
+	<!--</div>  page container -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
