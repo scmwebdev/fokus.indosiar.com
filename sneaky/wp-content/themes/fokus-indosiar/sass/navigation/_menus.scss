@@ -101,11 +101,52 @@
             list-style: none;
             width: calc(100% - 40%);
             text-align: center;
-
             a {
-            	color: #000;
-            	text-transform: uppercase;
+                @include transition(0.1s);
+                color: #000;
+                text-transform: uppercase;
+                &:hover {
+                    color: $color__primary__red;
+                }
             }
         }
     }
+}
+
+
+/* ******************** *
+ * Mobile Megamenu 
+ * ******************** */
+
+.main-navigation__bar {
+    float: right;
+    @include spacepad(15px);
+    .bar {
+        height: 4px;
+        width: 25px;
+        background-color: #000;
+        position: relative;
+        @include spacemar(4px);
+        @include transition(.2s);
+    }
+    body.menu-active & {
+        .bar {
+            &-one {
+                transform: rotate(-50deg);
+                transform-origin: left left;
+                top: 8px;
+            }
+            &-two {
+                display: none;
+            }
+            &-three {
+                transform: rotate(50deg);
+                transform-origin: right right;
+            }
+        }
+    }
+}
+
+.main-navigation.mobile {
+    display: none;
 }

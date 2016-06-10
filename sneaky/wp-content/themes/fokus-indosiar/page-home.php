@@ -10,6 +10,10 @@ get_header(); ?>
 
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
+		<div class="content-header">
+			<div class="leftCol col-sm-5"></div>
+			<div class="rightCol col-sm-7"></div>
+		</div>
 	</main>
 </div>
 <?php get_footer(); ?>

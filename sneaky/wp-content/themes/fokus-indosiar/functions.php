@@ -116,6 +116,8 @@ add_action( 'widgets_init', 'fokus_indosiar_widgets_init' );
 function fokus_indosiar_scripts() {
 	wp_enqueue_style( 'fokus-indosiar-style', get_stylesheet_uri() );
 
+	wp_enqueue_script( 'fokus-indosiar-js', get_template_directory_uri() . '/fokus-indosiar.js', array(), '', true );
+
 	wp_enqueue_script( 'fokus-indosiar-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'fokus-indosiar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
