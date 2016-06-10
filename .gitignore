@@ -1,0 +1,7 @@
+#List of ignored files
+
+#npm packages
+node_modules/
+
+#mac default files
+.DS_Store
