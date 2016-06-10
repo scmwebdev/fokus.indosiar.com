@@ -21,10 +21,13 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#main"><?php esc_html_e( 'Skip to content', 'fokus-indosiar' ); ?></a>
-
+<div id="page" class="site page-<?php echo strtolower(get_the_title()); ?>">
 	<header id="masthead" class="site-header" role="banner">
+		<div class="site-header-line">
+			<span class="red"></span>
+			<span class="green"></span>
+			<span class="blue"></span>
+		</div>
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>

@@ -1,6 +1,10 @@
 /* ============================================================
   CUSTOM PAGINATION
 ============================================================ */
+
+$color__pagination: #000 !default;
+$color__pagination__bg: #ddd !default;
+
 .custom-pagination span,
 .custom-pagination a {
   display: inline-block;

@@ -44,7 +44,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
-@import "mixins/mixins-master";
+
+/*--------------------------------------------------------------
+# Use Custom mixins and utilities
+--------------------------------------------------------------*/
+@import "kodein";
 
 /*--------------------------------------------------------------
 # Normalize
