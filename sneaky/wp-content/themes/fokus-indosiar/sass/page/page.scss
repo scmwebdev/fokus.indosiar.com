@@ -1,0 +1,16 @@
+.site-header-line {
+    > span {
+        height: 5px;
+        float: left;
+        width: 33.333%;
+    }
+    .red {
+    	background-color: $color__primary__red;
+    }
+    .green {
+    	background-color: $color__primary__green;
+    }
+    .blue {
+    	background-color: $color__primary__blue;
+    }
+}
