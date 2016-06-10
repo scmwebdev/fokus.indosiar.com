@@ -79,7 +79,7 @@ gulp.task('utility', function(){
         .pipe(gulp.dest(path));
 
     // move slick fonts to the sass folder under custom themes folder
-    var kodein_sass = gulp.src('lib/kodein-sass/kodein/**/*')
+    var kodein_sass = gulp.src('lib/sass/kodein/**/*')
         .pipe(gulp.dest(path + '/sass'));
 
     // move font_awesome fonts to themes root folder
