@@ -11,7 +11,7 @@ var merge = require('merge-stream');
 var reload = browserSync.reload;
 
 /* path to wp custom theme */
-var path = 'sneaky/wp-content/themes/news-sctv';
+var path = 'sneaky/wp-content/themes/fokus-indosiar';
 
 /* ========================================================
  * Tasks with Browser Sync
@@ -30,7 +30,7 @@ gulp.task('browserSync', function() {
     ];
 
     browserSync.init(files, {
-        proxy: "http://localhost:8888/news.sctv.co.id/",
+        proxy: "http://localhost:8888/fokus.indosiar.com/",
         notify: 'false'
     });
 });
@@ -57,12 +57,12 @@ gulp.task('js', function() {
             './node_modules/fastclick/lib/*.js',
             './node_modules/slick-carousel/slick/slick.js',
             './node_modules/jquery-match-height/dist/jquery.matchHeight.js',
-            path + '/js/news-sctv.js',
+            path + '/js/fokus-indosiar.js',
         ])
-        .pipe(concat('news-sctv.js'))
+        .pipe(concat('fokus-indosiar.js'))
         .pipe(gulp.dest(path))
         .pipe(uglify())
-        .pipe(concat('news-sctv.min.js'))
+        .pipe(concat('fokus-indosiar.min.js'))
         .pipe(gulp.dest(path))
         .pipe(reload({ stream: true }));
 });
