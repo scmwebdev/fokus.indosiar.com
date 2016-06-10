@@ -1,6 +1,6 @@
 html {
 	box-sizing: border-box;
-	font: 400 16px "Roboto Condensed",Helvetica,Arial,sans-serif;
+
 }
 
 *,
@@ -38,6 +38,13 @@ img {
 
 @import "tables";
 
+// hide screen reader class
 .sr-only {
 	display: none;
+}
+
+a {
+	&:hover {
+		text-decoration: none !important;
+	}
 }

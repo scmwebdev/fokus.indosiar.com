@@ -3,12 +3,12 @@ button,
 input,
 select,
 textarea {
-	color: $color__text-main;
-	font-family: $font__main;
-	@include font-size(1);
-	line-height: $font__line-height-body;
+    color: $color__text-main;
+    // font-family: $font__main;
+    // @include font-size(1);
+    font: 400 16px "Roboto Condensed", Helvetica, Arial, sans-serif;
+    line-height: $font__line-height-body;
 }
 
 @import "headings";
-
 @import "copy";

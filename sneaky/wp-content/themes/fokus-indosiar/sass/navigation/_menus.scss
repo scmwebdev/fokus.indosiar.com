@@ -101,6 +101,11 @@
             list-style: none;
             width: calc(100% - 40%);
             text-align: center;
+
+            a {
+            	color: #000;
+            	text-transform: uppercase;
+            }
         }
     }
 }
