@@ -8,11 +8,13 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="primary" class="content-area frontpage">
 	<main id="main" class="site-main" role="main">
-		<div class="content-header">
-			<div class="leftCol col-sm-5"></div>
-			<div class="rightCol col-sm-7"></div>
+		<div class="container-fluid no-spacepad-side">
+			<?php get_custom_post('header', 4, 6, 'top_stories', 'yes'); ?>
+			<div class="content">
+				this is content
+			</div>
 		</div>
 	</main>
 </div>
