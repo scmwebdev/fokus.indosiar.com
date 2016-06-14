@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 <?php wp_head(); ?>
 </head>
 
@@ -38,7 +38,7 @@
 	                </h1>
 	            </div>
 			</div><!-- .site-branding -->
-			<div class="main-navigation__bar clearfix menu-trigger">
+			<div class="main-navigation__bar visible-xs clearfix menu-trigger">
 				<div class="bar bar-one"></div>
 				<div class="bar bar-two"></div>
 				<div class="bar bar-three"></div>
