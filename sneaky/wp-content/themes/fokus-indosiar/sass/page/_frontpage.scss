@@ -1,12 +1,40 @@
 /* FRONT PAGE STYLE */
 
 .frontpage {
-	.content-header {
-		background: $color__primary__green;
-		.leftCol {
-			.column-container {
-				padding: 2em;
-			}
-		}
-	}
+    .content-header {
+        .content-theatre {
+            background: $color__primary__green;
+            display: none;
+            max-height: 600px;
+            overflow: hidden;
+            &.active {
+                display: block;
+            }
+        }
+        .leftCol {
+            color: #fff;
+            .title {
+                font-size: 3em;
+            }
+            button.btn {
+                font-size: 1.5em;
+                float: right;
+            }
+            .column-container {
+                padding: 2em;
+            }
+        }
+    }
+}
+
+#frontpage-header-gallery {
+    .item-post {
+        &__thumbnail {
+            float: left;
+            cursor: pointer;
+            width: 320px;
+            height: 150px;
+            background-size: cover;
+        }
+    }
 }

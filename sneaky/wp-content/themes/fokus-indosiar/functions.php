@@ -157,10 +157,10 @@ require get_template_directory() . '/inc/jetpack.php';
  * Additional Image Sizes
  * ================================================================== */
 
-add_image_size( 'mainBanner_lg', 1920, 600, true);
-add_image_size( 'mainBanner_lg_2', 1000, 600, true);
-add_image_size( 'mainBanner_md', 992, 400, true);
+add_image_size( 'mainBanner_lg', 1200, 800, hard);
+// add_image_size( 'mainBanner_md', 992, 400, true);
 add_image_size( 'mainBanner_xs', 600, 600, true);
+add_image_size( 'mainBanner_thumb', 400, 150, hard);
 add_image_size( 'video_thumb', 400, 250, hard);
 add_image_size( 'article_thumb', 250, 250, hard);
 add_image_size( 'logo', 200, 200, hard);
@@ -514,4 +514,62 @@ function get_custom_post($template, $minPost, $maxPost, $key, $keyValue,  $order
 	wp_reset_postdata();
 }
 
+function get_thumb($template, $minPost, $maxPost, $key, $keyValue,  $order = 'DESC', $compare = '=') {
+
+	// set the min and max of posts and store it in a var
+	$post_per_page = max_post($minPost, $maxPost);
+
+	$numargs = func_num_args();
+	$args;
+	if ($numargs > 3) {
+		// set the filters/requirement for the query
+		$args = array (
+			'post_status'            => array( 'publish' ),
+			'order'                  => 'DESC',
+			'post_type' 			 => 'post',
+			'posts_per_page' 		 => $post_per_page,
+			'meta_query' => array(
+				array(
+					'key'       => $key,
+					'value'     => $keyValue,
+					'compare'   => $compare,
+					'order'		=> $order
+				),
+			),
+		);
+	}
+
+	// The Query
+	$query = new WP_Query( $args );
+
+	// The Loop
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			get_template_part('template-parts/frontpage', $template);
+		}
+	} else {
+		// no posts found
+		echo 'no posts found';
+	}
+
+	// Restore original Post Data
+	wp_reset_postdata();
+}
+
+function qod_remove_extra_data( $data, $post, $context ) {
+  // We only want to modify the 'view' context, for reading posts
+  if ( $context !== 'view' || is_wp_error( $data ) ) {
+    return $data;
+  }
+  
+  // Here, we unset any data we don't want to see on the front end:
+  unset( $data['author'] );
+  unset( $data['status'] );
+  // continue unsetting whatever other fields you want
+
+  return $data;
+}
+
+add_filter( 'json_prepare_post', 'qod_remove_extra_data', 12, 3 );
 

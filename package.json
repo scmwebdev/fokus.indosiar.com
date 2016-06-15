@@ -19,6 +19,7 @@
   "devDependencies": {
     "bootstrap-sass": "^3.3.6",
     "browser-sync": "^2.13.0",
+    "fastclick": "^1.0.6",
     "font-awesome": "^4.6.3",
     "graceful-fs": "^4.1.4",
     "gulp": "^3.9.1",
