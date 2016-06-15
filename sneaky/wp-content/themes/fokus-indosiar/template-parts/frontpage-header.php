@@ -22,7 +22,10 @@
 
 <div class="content-theatre clearfix">
 	<div class="column-container">
-		<?php the_post_thumbnail('mainBanner_lg', array( 'class' => 'fullwidth')); ?>
+		<?php 
+			(!has_post_thumbnail() ? '' : is_mobile() ? the_post_thumbnail('mainBanner_xs') : the_post_thumbnail('mainBanner_lg', array( 'class' => 'fullwidth')));
+			//the_post_thumbnail('mainBanner_lg', array( 'class' => 'fullwidth')); 
+		?>
 	</div>
 	<div class="leftCol no-spacepad-side">
 		<div class="column-container">

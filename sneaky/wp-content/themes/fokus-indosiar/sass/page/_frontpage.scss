@@ -4,11 +4,10 @@
     .content-header {
         .content-theatre {
             background: $color__primary__green;
-            display: none;
-            max-height: 600px;
-            overflow: hidden;
-            &.active {
-                display: block;
+            // height: 600px;
+            @include breakpoint(sm) {
+                max-height: 600px;
+                overflow: hidden;
             }
         }
         .leftCol {
@@ -22,6 +21,10 @@
             }
             .column-container {
                 padding: 2em;
+                @include breakpoint(xs) {
+                    min-height: 80vh;
+                    min-height: 534px;
+                }
             }
         }
     }
@@ -31,6 +34,13 @@
     }
 }
 
-#frontpage-header-gallery {
+#main-gallery-desktop .content-theatre {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+
+#gallery-thumb {
     background-color: rgba(0, 0, 0, 0.9);
 }

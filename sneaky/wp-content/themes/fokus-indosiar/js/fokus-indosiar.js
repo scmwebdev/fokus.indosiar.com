@@ -9,23 +9,30 @@
 
         init: function(settings) {
             MainBanner.config = {
-                container: $('.content-theatre'),
-                target: $('#frontpage-header-gallery'),
-                firstChild: $('.content-theatre:first-child'),
+            	mainGallery 	: $('#main-gallery-desktop'),
+                galleryThumb 	: $('#gallery-thumb'),
+                firstChild 		: $('.content-theatre:first-child'),
             };
 
             $.extend(MainBanner.config, settings);
             MainBanner.setup();
+            
         },
         setup: function() {
-            MainBanner.config.firstChild.addClass('active');
+            MainBanner.config.mainGallery
+            	.find(MainBanner.config.firstChild)
+            	.addClass('active');
             MainBanner.calltoAction();
+            
         },
         removeActive: function() {
-            MainBanner.config.container.removeClass('active');
+            MainBanner.config.mainGallery
+            	.find('.content-theatre')
+            	.removeClass('active');
         },
         calltoAction: function() {
-            MainBanner.config.target
+   
+            MainBanner.config.galleryThumb
                 .find('.item-post__gallery-thumb')
                 .click(function() {
                     var thumbID = $(this).attr('data-postid');
@@ -39,13 +46,15 @@
     $(document).ready(function() {
         console.log('Spirit Dreams Inside');
 
-
         $('.menu-trigger').click(function() {
             $('body').toggleClass('menu-active');
         });
 
-
-        $('#main-gallery-mobile').slick();
+        $('#main-gallery-mobile').slick({
+        	autoplay: true,
+        	autoplaySpeed: 4000,
+        	draggable: true
+        });
 
     });
 

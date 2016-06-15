@@ -10,17 +10,23 @@
 ?>
 
 <div class="item-post spacepad-15 col-xs-12 col-sm-4">
-	<div class="item-list-thumb">
+	<div class="item-post-thumb">
 		<a href="<?php echo get_permalink(); ?>">
-			<?php (has_post_thumbnail()) ? the_post_thumbnail('video_thumb') : ''; ?>
+			<?php 
+
+				// echo $i == 0 ? 'first_row' : ($i == 4 ? 'last_row' : 'none');
+
+				(has_post_thumbnail() ? '' : is_mobile() ? the_post_thumbnail('mainBanner_xs') : the_post_thumbnail('video_thumb'));
+
+			?>
 		</a>
 	</div>
-	<div class="item-list-desc">
-		<div class="item-list-title ">
-			<?php the_title(); ?>
-			<div class="item-list-date"><?php echo get_the_date(); ?></div>
+	<div class="item-post-desc">
+		<div class="item-post-title ">
+			<div class="title"><?php the_title(); ?></div>
+			<div class="item-post-date"><?php echo get_the_date(); ?></div>
 		</div>
-		<div class="item-list-text">
+		<div class="item-post-text">
 			<?php the_excerpt(); ?>
 		</div>
 	</div>
