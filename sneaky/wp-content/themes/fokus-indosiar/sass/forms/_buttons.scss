@@ -28,7 +28,9 @@
 button.btn {
 	background: none;
 	@include transition(.2s);
-	&:hover {
+	&:hover,
+	&:active,
+	&:focus {
 		background-color: $color__primary__red;
 	}
 	a { color: #fff; } 
