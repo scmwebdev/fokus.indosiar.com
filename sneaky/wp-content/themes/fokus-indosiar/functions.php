@@ -466,7 +466,7 @@ function get_custom_post($template, $minPost, $maxPost, $key, $keyValue,  $order
 				),
 			),
 		);
-	} elseif($numargs < 3 ) {
+	} else {
 		$args = array (
 			'post_status'            => array( 'publish' ),
 			'order'                  => 'DESC',
@@ -482,7 +482,7 @@ function get_custom_post($template, $minPost, $maxPost, $key, $keyValue,  $order
 	if ( $query->have_posts() ) {
 		while ( $query->have_posts() ) {
 			$query->the_post();
-			get_template_part('template-parts/frontpage', $template);
+			get_template_part('template-parts/content', $template);
 		}
 	} else {
 		// no posts found

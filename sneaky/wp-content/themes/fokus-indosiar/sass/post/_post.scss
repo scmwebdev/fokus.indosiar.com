@@ -1,7 +1,21 @@
 /* Post Styling */
 
 .item-post {
-	.title {
-		text-transform: capitalize;
-	}
+
+	/** gallery thumb on the frontpage **/
+    &__gallery-thumb {
+        float: left;
+        cursor: pointer;
+        width: 320px;
+        height: 150px;
+        @include transition(.2s);
+        @include filter(brightness, 80%);
+        &:hover {
+            @include filter(brightness, 100%);
+        }
+    }
+
+    &-title {
+        text-transform: capitalize;
+    }
 }

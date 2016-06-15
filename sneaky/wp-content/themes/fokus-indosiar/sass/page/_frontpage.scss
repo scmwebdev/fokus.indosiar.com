@@ -33,17 +33,4 @@
 
 #frontpage-header-gallery {
     background-color: rgba(0, 0, 0, 0.9);
-    .item-post {
-        &__thumbnail {
-            float: left;
-            cursor: pointer;
-            width: 320px;
-            height: 150px;
-            @include transition(.2s);
-            @include filter(brightness, 80%);
-            &:hover {
-                @include filter(brightness, 100%);
-            }
-        }
-    }
 }
