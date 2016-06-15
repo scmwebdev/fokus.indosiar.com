@@ -34,7 +34,11 @@
             cursor: pointer;
             width: 320px;
             height: 150px;
-            background-size: cover;
+            @include transition(.2s);
+            @include filter(brightness, 80%);
+            &:hover {
+                @include filter(brightness, 100%);
+            }
         }
     }
 }
