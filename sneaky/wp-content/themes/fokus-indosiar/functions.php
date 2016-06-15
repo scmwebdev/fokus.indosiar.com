@@ -443,34 +443,6 @@ function breaking_news() {
 
 }
 
-function lalala($template, $minPost, $maxPost) {
-
-	// set the min and max of posts and store it in a var
-	$post_per_page = max_post($minPost, $maxPost);
-
-	$args = array (
-		'post_status'            => array( 'publish' ),
-		'order'                  => 'DESC',
-		'post_type' 			 => 'post',
-		'posts_per_page' 		 => $post_per_page,
-	);
-
-	// The Query
-	$query = new WP_Query( $args );
-
-	// The Loop
-	if ( $query->have_posts() ) {
-		while ( $query->have_posts() ) {
-			$query->the_post();
-				get_template_part('template-parts/frontpage', $template);
-		}
-	} else {
-		// no posts found
-	}
-
-	// Restore original Post Data
-	wp_reset_postdata();
-}
 function get_custom_post($template, $minPost, $maxPost, $key, $keyValue,  $order = 'DESC', $compare = '=') {
 
 	// set the min and max of posts and store it in a var
@@ -494,48 +466,12 @@ function get_custom_post($template, $minPost, $maxPost, $key, $keyValue,  $order
 				),
 			),
 		);
-	}
-
-	// The Query
-	$query = new WP_Query( $args );
-
-	// The Loop
-	if ( $query->have_posts() ) {
-		while ( $query->have_posts() ) {
-			$query->the_post();
-			get_template_part('template-parts/frontpage', $template);
-		}
-	} else {
-		// no posts found
-		echo 'no posts found';
-	}
-
-	// Restore original Post Data
-	wp_reset_postdata();
-}
-
-function get_thumb($template, $minPost, $maxPost, $key, $keyValue,  $order = 'DESC', $compare = '=') {
-
-	// set the min and max of posts and store it in a var
-	$post_per_page = max_post($minPost, $maxPost);
-
-	$numargs = func_num_args();
-	$args;
-	if ($numargs > 3) {
-		// set the filters/requirement for the query
+	} elseif($numargs < 3 ) {
 		$args = array (
 			'post_status'            => array( 'publish' ),
 			'order'                  => 'DESC',
 			'post_type' 			 => 'post',
 			'posts_per_page' 		 => $post_per_page,
-			'meta_query' => array(
-				array(
-					'key'       => $key,
-					'value'     => $keyValue,
-					'compare'   => $compare,
-					'order'		=> $order
-				),
-			),
 		);
 	}
 
@@ -556,6 +492,78 @@ function get_thumb($template, $minPost, $maxPost, $key, $keyValue,  $order = 'DE
 	// Restore original Post Data
 	wp_reset_postdata();
 }
+
+function top_stories() {
+
+	// set the min and max of posts and store it in a var
+	$post_per_page = max_post($minPost, $maxPost);
+	$args = array (
+		'post_status'            => array( 'publish' ),
+		'order'                  => 'DESC',
+		'post_type' 			 => 'post',
+		'posts_per_page' 		 => $post_per_page,
+		'meta_query' => array(
+			array(
+				'key'       => 'top_stories',
+				'value'     => 'yes',
+			),
+		),
+	);
+	// The Query
+	$query = new WP_Query( $args );
+
+	// The Loop
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			get_template_part('template-parts/frontpage', 'header');
+		}
+	} else {
+		// no posts found
+		echo 'no posts found';
+	}
+
+	// Restore original Post Data
+	wp_reset_postdata();
+}
+
+function top_stories_thumb() {
+
+	// set the min and max of posts and store it in a var
+	$post_per_page = max_post($minPost, $maxPost);
+	$args = array (
+		'post_status'            => array( 'publish' ),
+		'order'                  => 'DESC',
+		'post_type' 			 => 'post',
+		'posts_per_page' 		 => $post_per_page,
+		'meta_query' => array(
+			array(
+				'key'       => 'top_stories',
+				'value'     => 'yes',
+			),
+		),
+	);
+	// The Query
+	$query = new WP_Query( $args );
+
+	// The Loop
+	if ( $query->have_posts() ) {
+		while ( $query->have_posts() ) {
+			$query->the_post();
+			get_template_part('template-parts/frontpage', 'headerthumbnails');
+		}
+	} else {
+		// no posts found
+		echo 'no posts found';
+	}
+
+	// Restore original Post Data
+	wp_reset_postdata();
+}
+
+/* ==================================================================
+ * WP REST APi CUSTOM
+ * ================================================================== */
 
 function qod_remove_extra_data( $data, $post, $context ) {
   // We only want to modify the 'view' context, for reading posts

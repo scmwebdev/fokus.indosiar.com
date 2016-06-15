@@ -12,13 +12,18 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<div class="container-fluid no-spacepad-side">
 			<div class="content-header clearfix item-post">
-				<?php get_custom_post('header', 4, 6, 'top_stories', 'yes'); ?>
-				<div class="list_thumb" id="frontpage-header-gallery">
-					<?php get_thumb('galleryThumb', 4, 6, 'top_stories', 'yes') ?>
+				<?php top_stories(); ?>
+				<div class="list-thumb clearfix" id="frontpage-header-gallery">
+					<?php top_stories_thumb(); ?>
 				</div>
 			</div>
 			<div class="content">
-				this is content
+				<div class="container no-spacepad-side spacepad-15">
+					<h2 class="title title__upper"> Latest News</h2>
+				</div>
+				<div class="content-container">
+					<?php ?>
+				</div>
 			</div>
 		</div>
 	</main>
