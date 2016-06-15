@@ -14,11 +14,11 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'fokus-indosiar' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'fokus-indosiar' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'fokus-indosiar' ), 'fokus-indosiar', '<a href="http://underscores.me/" rel="designer">Gamal</a>' ); ?>
-		</div><!-- .site-info -->
+		<div class="site-info container">
+			<div class="widget-area widget-footer col-xs-12 col-sm-4" id="perusahaan">
+			        <?php dynamic_sidebar( 'footer-list-1' ); ?>
+			    </div><!-- #more-info .widget-area -->
+			</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	<!--</div>  page container -->
 </div><!-- #page -->

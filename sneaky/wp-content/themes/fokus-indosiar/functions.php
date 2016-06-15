@@ -107,6 +107,16 @@ function fokus_indosiar_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer List 1', 'fokus-indosiar' ),
+		'id'            => 'footer-list-1',
+		'description'   => esc_html__( 'Add widgets here.', 'fokus-indosiar' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
 }
 add_action( 'widgets_init', 'fokus_indosiar_widgets_init' );
 

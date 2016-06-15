@@ -1,0 +1,14 @@
+.widget-footer {
+    .widget-title {
+        font-weight: 600;
+    }
+    ul {
+        @extend .nodots;
+        a {
+            color: #000;
+            &:visited {
+                color: #000;
+            }
+        }
+    }
+}
