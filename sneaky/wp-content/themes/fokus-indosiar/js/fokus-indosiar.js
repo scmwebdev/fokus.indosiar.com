@@ -1,25 +1,52 @@
 /* Fokus Indosiar JS */
 
 (function($) {
-	
-	FastClick.attach(document.body); //instantiate fastclick
 
-	$(document).ready(function() {
-		console.log('Spirit Dreams Inside');
+    FastClick.attach(document.body); //instantiate fastclick
 
-		$('.menu-trigger').click(function() {
-			$('body').toggleClass('menu-active');
-		});
+    /** ********** MainBanner Controller ********** **/
+    var MainBanner = {
 
-		/** main banner controller ************ **/
-		$('.content-theatre:first-child').addClass('active');
-		$('#frontpage-header-gallery .item-post__thumbnail').click(function() {
-			var thumb_id = $(this).attr('data-postid');
-			var target = $('.content-theatre');
-			target.removeClass('active');
-			$('.content-theatre[data-postid='+ thumb_id +']').addClass('active');
-		});
-		/** ./main banner controller ************ **/
-	});
+        init: function(settings) {
+            MainBanner.config = {
+                container: $('.content-theatre'),
+                target: $('#frontpage-header-gallery'),
+                firstChild: $('.content-theatre:first-child'),
+            };
+
+            $.extend(MainBanner.config, settings);
+            MainBanner.setup();
+        },
+        setup: function() {
+            MainBanner.config.firstChild.addClass('active');
+            MainBanner.calltoAction();
+        },
+        removeActive: function() {
+            MainBanner.config.container.removeClass('active');
+        },
+        calltoAction: function() {
+            MainBanner.config.target
+                .find('.item-post__gallery-thumb')
+                .click(function() {
+                    var thumbID = $(this).attr('data-postid');
+                    MainBanner.removeActive();
+                    $('.content-theatre[data-postid=' + thumbID + ']').addClass('active');
+                })
+        }
+    };
+    $(document).ready(MainBanner.init);
+
+    $(document).ready(function() {
+        console.log('Spirit Dreams Inside');
+
+
+        $('.menu-trigger').click(function() {
+            $('body').toggleClass('menu-active');
+        });
+
+
+        $('#main-gallery-mobile').slick();
+
+    });
 
 })(jQuery);
