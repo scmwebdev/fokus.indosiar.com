@@ -51,6 +51,7 @@ footer {
             &-content {
                 @include transition(.2s);
                 @include opacity(0);
+                @include card(3);
                 background-color: #fff;
                 position: absolute;
                 top: -20em;

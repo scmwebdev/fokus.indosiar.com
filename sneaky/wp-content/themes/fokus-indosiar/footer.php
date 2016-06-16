@@ -21,10 +21,10 @@
 		</div><!-- .site-info -->
 		<hr class="no-margin">
 		<div class="site-info container spacepad-15 ad-info">
-			<div class="copyright">
+			<div class="copyright col-sm-7">
 				<span class="small">Copyright&nbsp;<i class="fa fa-copyright">&nbsp;</i>2015 PT INDOSIAR VISUAL MANDIRI</span>	
 			</div>
-			<div class="site-info-extra hidden-xs">
+			<div class="site-info-extra col-sm-3 hidden-xs" id="extra">
 				<div class="text-right">
 					Tautan Luar <i class="fa fa-chevron-down"></i>	
 				</div>

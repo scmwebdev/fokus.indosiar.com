@@ -87,7 +87,7 @@ gulp.task('utility', function(){
     var font_awesome = gulp.src('node_modules/font-awesome/fonts/**/*')
         .pipe(gulp.dest('sneaky/wp-content/themes/fonts/'))
 
-    var bootstrap_front = gulp.src('node_modules/bootstrap-sass/assets/fonts/bootstrap/*')
+    var bootstrap_font = gulp.src('node_modules/bootstrap-sass/assets/fonts/bootstrap/*')
         .pipe(gulp.dest('sneaky/wp-content/themes/fonts/'))
 
     return merge(slick_fonts, ajax_loader, kodein_sass, font_awesome, bootstrap_font);
