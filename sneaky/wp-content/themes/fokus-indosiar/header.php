@@ -43,10 +43,17 @@
 				<div class="bar bar-two"></div>
 				<div class="bar bar-three"></div>
 			</div>
-			<nav id="site-navigation" class="main-navigation <?php echo (is_mobile() ? 'mobile' : 'desktop' )?>" role="navigation">
+			<?php if(!is_mobile()) { ?>
+			<nav id="site-navigation" class="main-navigation desktop>" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 			</nav><!-- #site-navigation -->
+			<?php } //endif ?>
 		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
+		<?php if(is_mobile()) { ?>
+		<nav id="site-navigation" class="main-navigation mobile" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+		<?php } //endif ?>

@@ -6495,7 +6495,7 @@ if (typeof jQuery === 'undefined') {
         init: function(settings) {
             MainBanner.config = {
             	mainGallery 	: $('#main-gallery-desktop'),
-                galleryThumb 	: $('#gallery-thumb'),
+                galleryThumb 	: $('#gallery-thumb').find('.item-post__gallery-thumb'),
                 firstChild 		: $('.content-theatre:first-child'),
             };
 
@@ -6516,14 +6516,36 @@ if (typeof jQuery === 'undefined') {
             	.removeClass('active');
         },
         calltoAction: function() {
-   
+            MainBanner.calculateThumb();
             MainBanner.config.galleryThumb
-                .find('.item-post__gallery-thumb')
                 .click(function() {
                     var thumbID = $(this).attr('data-postid');
                     MainBanner.removeActive();
                     $('.content-theatre[data-postid=' + thumbID + ']').addClass('active');
                 })
+        },
+        calculateThumb: function() {
+            var totalOfThumb = MainBanner.config.galleryThumb.length;
+            console.log(totalOfThumb);
+            switch(totalOfThumb) {
+                case totalOfThumb <= 2:
+                    MainBanner.config.galleryThumb.css('width', '50%');
+                    break;
+                case totalOfThumb = 3:
+                    MainBanner.config.galleryThumb.css('width', '33.3%');
+                    break;
+                case totalOfThumb = 4:
+                    MainBanner.config.galleryThumb.css('width', '25%');
+                    break;
+                case totalOfThumb >= 5:
+                    MainBanner.config.galleryThumb.css('width', '20%');
+                    break;
+                default:
+                    MainBanner.config.galleryThumb.css('width', '20%');
+            }
+            // if(totalOfThumb < 2) {
+            //     MainBanner.config.galleryThumb.css('width', '50%');
+            // }
         }
     };
     $(document).ready(MainBanner.init);
@@ -6540,6 +6562,9 @@ if (typeof jQuery === 'undefined') {
         	autoplaySpeed: 4000,
         	draggable: true
         });
+
+        $('.post-list-latest > .item-post').matchHeight();
+        $('.gallery-col').matchHeight();
 
     });
 

@@ -12,6 +12,7 @@
         }
         .leftCol {
             color: #fff;
+            min-height: 600px;
             .title {
                 font-size: 3em;
             }
@@ -36,6 +37,7 @@
 
 #main-gallery-desktop .content-theatre {
     display: none;
+    min-height: 600px;
     &.active {
         display: block;
     }
