@@ -24,20 +24,18 @@
 			<div class="copyright">
 				<span class="small">Copyright&nbsp;<i class="fa fa-copyright">&nbsp;</i>2015 PT INDOSIAR VISUAL MANDIRI</span>	
 			</div>
-			<div class="etc">
-				<div class="site-info-extra hidden-xs col-sm-3">
-					<div class="text-right">
-						Tautan Luar <i class="fa fa-chevron-down"></i>	
-					</div>
-					<div class="site-info-extra-content">
-						<ul class="nodots">
-							<li>target</li>
-							<li>target</li>
-							<li>target</li>
-						</ul>
-					</div>
-					
+			<div class="site-info-extra hidden-xs">
+				<div class="text-right">
+					Tautan Luar <i class="fa fa-chevron-down"></i>	
 				</div>
+				<div class="site-info-extra-content">
+					<ul class="nodots">
+						<li>target</li>
+						<li>target</li>
+						<li>target</li>
+					</ul>
+				</div>
+				
 			</div>
 		</div>
 	</footer><!-- #colophon -->

@@ -37,7 +37,7 @@
     z-index: 99;
     display: none;
     @include transition(.2s);
-    body.menu-active & {
+    body.active & {
         display: block;
     }
     ul,
@@ -69,7 +69,7 @@
         @include spacemar(4px);
         @include transition(.2s);
     }
-    body.menu-active & {
+    body.active & {
         .bar {
             &-one {
                 transform: rotate(-50deg);

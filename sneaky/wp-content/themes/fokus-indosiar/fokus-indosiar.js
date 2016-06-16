@@ -6549,13 +6549,14 @@ var Page = {
         console.log('Spirit Dreams Inside');
         FastClick.attach(document.body); //instantiate fastclick
         Page.megamenuToggle();
+        Page.toggleActive();
         Page.gallerySlick();
         Page.matchContentHeight();
     },
     megamenuToggle: function() {
         var trigger = $('.menu-trigger');
         trigger.click(function() {
-            $('body').toggleClass('menu-active');
+            $('body').toggleClass('active');
         });
     },
     gallerySlick: function() {
@@ -6573,6 +6574,15 @@ var Page = {
         $.each(classes, function(key, value) {
             $(value).matchHeight();
         });
+    },
+    toggleActive: function(clickArea, injectedClass, targetArea) {
+        // set default param: if targetArea is not defined then its the same as clickArea
+        targetArea = clickArea || targetArea;
+        console.log(targetArea);
+        console.log(clickArea);
+        $(clickArea).click(function() {
+            $(targetArea).toggleClass(injectedClass);
+        });
     }
 };
 
@@ -6581,6 +6591,8 @@ var Page = {
 
     Page.init(); //initiliaze the page
     MainGallery.init(); //setup the main banner on the frontpage
+
+    Page.toggleActive('.site-info-extra', 'active');
 
 
 })(jQuery);

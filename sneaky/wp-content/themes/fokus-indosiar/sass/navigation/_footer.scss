@@ -23,12 +23,15 @@ $radius: 10px;
 footer {
     .site-info.ad-info {
         text-align: center;
+
+        > div {
+            float: left;
+        }
         @include breakpoint(sm) {
             text-align: left;
         }
 
         .site-info-extra {
-            @include spacepad($pad);
             text-transform: uppercase;
             position: relative;
             @include transition(.2s);
