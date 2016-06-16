@@ -6485,87 +6485,102 @@ if (typeof jQuery === 'undefined') {
 
 /* Fokus Indosiar JS */
 
-(function($) {
+/** ********** MainGallery Controller ********** **/
+var MainGallery = {
 
-    FastClick.attach(document.body); //instantiate fastclick
+    init: function(settings) {
+        MainGallery.config = {
+            mainGallery: $('#main-gallery-desktop'),
+            galleryThumb: $('#gallery-thumb').find('.item-post__gallery-thumb'),
+            firstChild: $('.content-theatre:first-child'),
+        };
 
-    /** ********** MainBanner Controller ********** **/
-    var MainBanner = {
+        $.extend(MainGallery.config, settings);
+        MainGallery.setup();
 
-        init: function(settings) {
-            MainBanner.config = {
-            	mainGallery 	: $('#main-gallery-desktop'),
-                galleryThumb 	: $('#gallery-thumb').find('.item-post__gallery-thumb'),
-                firstChild 		: $('.content-theatre:first-child'),
-            };
+    },
+    setup: function() {
+        MainGallery.config.mainGallery
+            .find(MainGallery.config.firstChild)
+            .addClass('active');
+        MainGallery.calltoAction();
 
-            $.extend(MainBanner.config, settings);
-            MainBanner.setup();
-            
-        },
-        setup: function() {
-            MainBanner.config.mainGallery
-            	.find(MainBanner.config.firstChild)
-            	.addClass('active');
-            MainBanner.calltoAction();
-            
-        },
-        removeActive: function() {
-            MainBanner.config.mainGallery
-            	.find('.content-theatre')
-            	.removeClass('active');
-        },
-        calltoAction: function() {
-            MainBanner.calculateThumb();
-            MainBanner.config.galleryThumb
-                .click(function() {
-                    var thumbID = $(this).attr('data-postid');
-                    MainBanner.removeActive();
-                    $('.content-theatre[data-postid=' + thumbID + ']').addClass('active');
-                })
-        },
-        calculateThumb: function() {
-            var totalOfThumb = MainBanner.config.galleryThumb.length;
-            console.log(totalOfThumb);
-            switch(totalOfThumb) {
-                case totalOfThumb <= 2:
-                    MainBanner.config.galleryThumb.css('width', '50%');
-                    break;
-                case totalOfThumb = 3:
-                    MainBanner.config.galleryThumb.css('width', '33.3%');
-                    break;
-                case totalOfThumb = 4:
-                    MainBanner.config.galleryThumb.css('width', '25%');
-                    break;
-                case totalOfThumb >= 5:
-                    MainBanner.config.galleryThumb.css('width', '20%');
-                    break;
-                default:
-                    MainBanner.config.galleryThumb.css('width', '20%');
-            }
-            // if(totalOfThumb < 2) {
-            //     MainBanner.config.galleryThumb.css('width', '50%');
-            // }
+    },
+    removeActive: function() {
+        MainGallery.config.mainGallery
+            .find('.content-theatre')
+            .removeClass('active');
+    },
+    calltoAction: function() {
+        MainGallery.calculateThumb();
+        MainGallery.config.galleryThumb
+            .click(function() {
+                var thumbID = $(this).attr('data-postid');
+                MainGallery.removeActive();
+                $('.content-theatre[data-postid=' + thumbID + ']').addClass('active');
+            })
+    },
+    calculateThumb: function() {
+        var totalOfThumb = MainGallery.config.galleryThumb.length;
+        switch (totalOfThumb) {
+            case totalOfThumb <= 2:
+                MainGallery.config.galleryThumb.css('width', '50%');
+                break;
+            case totalOfThumb = 3:
+                MainGallery.config.galleryThumb.css('width', '33.3%');
+                break;
+            case totalOfThumb = 4:
+                MainGallery.config.galleryThumb.css('width', '25%');
+                break;
+            case totalOfThumb >= 5:
+                MainGallery.config.galleryThumb.css('width', '20%');
+                break;
+            default:
+                MainGallery.config.galleryThumb.css('width', '20%');
         }
-    };
-    $(document).ready(MainBanner.init);
+    }
+};
+/** ********** /end ********** **/
 
-    $(document).ready(function() {
+/** ********** Page Contstructor ********** **/
+var Page = {
+
+    init: function() {
         console.log('Spirit Dreams Inside');
-
-        $('.menu-trigger').click(function() {
+        FastClick.attach(document.body); //instantiate fastclick
+        Page.megamenuToggle();
+        Page.gallerySlick();
+        Page.matchContentHeight();
+    },
+    megamenuToggle: function() {
+        var trigger = $('.menu-trigger');
+        trigger.click(function() {
             $('body').toggleClass('menu-active');
         });
-
+    },
+    gallerySlick: function() {
         $('#main-gallery-mobile').slick({
-        	autoplay: true,
-        	autoplaySpeed: 4000,
-        	draggable: true
+            autoplay: true,
+            autoplaySpeed: 4000,
+            draggable: true
         });
+    },
+    matchContentHeight: function() {
+        var classes = [
+            '.post-list-latest > .item-post',
+            '.gallery-col'
+        ];
+        $.each(classes, function(key, value) {
+            $(value).matchHeight();
+        });
+    }
+};
 
-        $('.post-list-latest > .item-post').matchHeight();
-        $('.gallery-col').matchHeight();
 
-    });
+(function($) {
+
+    Page.init(); //initiliaze the page
+    MainGallery.init(); //setup the main banner on the frontpage
+
 
 })(jQuery);

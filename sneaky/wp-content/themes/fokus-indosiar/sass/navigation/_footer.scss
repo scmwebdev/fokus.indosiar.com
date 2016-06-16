@@ -1,13 +1,82 @@
+$pad: 2em;
+$radius: 10px;
+
 .widget-footer {
     .widget-title {
         font-weight: 600;
     }
+    .widget_nav_menu {
+        @extend .col-sm-3;
+        @extend .col-xs-6;
+    }
     ul {
         @extend .nodots;
         a {
-            color: #000;
+            color: $color__font__reg;
             &:visited {
-                color: #000;
+                color: $color__font__reg;
+            }
+        }
+    }
+}
+
+footer {
+    .site-info.ad-info {
+        text-align: center;
+        @include breakpoint(sm) {
+            text-align: left;
+        }
+
+        .site-info-extra {
+            @include spacepad($pad);
+            text-transform: uppercase;
+            position: relative;
+            @include transition(.2s);
+            > div {
+                display: inline;
+                float: right;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            &.active {
+                .site-info-extra-content {
+                    top: -12em;
+                    @include opacity(1);
+                }
+            }
+            &-content {
+                @include transition(.2s);
+                @include opacity(0);
+                background-color: #fff;
+                position: absolute;
+                top: -20em;
+                right: 1em;
+                border-radius: 8%;
+                &:after {
+                    @include triangle(down, 10px, #fff);
+                    z-index: 2;
+                    left: 4em;
+                }
+                li {
+                    padding: 1em 3em;
+                    border-bottom: 1px solid #ddd;
+                    &:first-child {
+                        border-top-left-radius: $radius;
+                        border-top-right-radius: $radius;
+                    }
+                    &:last-child {
+                        border-bottom-left-radius: $radius;
+                        border-bottom-right-radius: $radius;
+                    }
+                    &:hover {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
             }
         }
     }
