@@ -1,6 +1,5 @@
 $pad: 2em;
 $radius: 10px;
-
 .widget-footer {
     .widget-title {
         font-weight: 600;
@@ -23,14 +22,12 @@ $radius: 10px;
 footer {
     .site-info.ad-info {
         text-align: center;
-
         > div {
             float: left;
         }
         @include breakpoint(sm) {
             text-align: left;
         }
-
         .site-info-extra {
             text-transform: uppercase;
             position: relative;
@@ -55,12 +52,15 @@ footer {
                 background-color: #fff;
                 position: absolute;
                 top: -20em;
-                right: 1em;
+                right: -1em;
                 border-radius: 8%;
                 &:after {
                     @include triangle(down, 10px, #fff);
                     z-index: 2;
                     left: 4em;
+                }
+                &.lastChildHovered:after {
+                    @include triangle(down, 10px, $color__primary__green);
                 }
                 li {
                     padding: 1em 3em;
@@ -74,7 +74,7 @@ footer {
                         border-bottom-right-radius: $radius;
                     }
                     &:hover {
-                        background-color: #000;
+                        background-color: $color__primary__green;
                         color: #fff;
                     }
                     &:last-child {
@@ -85,3 +85,7 @@ footer {
         }
     }
 }
+
+// .site-info-extra-content.lastChildHovered:after {
+//     @include triangle(down, 10px, $color__primary__green);
+// }

@@ -25,7 +25,7 @@
 				<span class="small">Copyright&nbsp;<i class="fa fa-copyright">&nbsp;</i>2015 PT INDOSIAR VISUAL MANDIRI</span>	
 			</div>
 			<div class="site-info-extra col-sm-3 hidden-xs" id="extra">
-				<div class="text-right">
+				<div class="small">
 					Tautan Luar <i class="fa fa-chevron-down"></i>	
 				</div>
 				<div class="site-info-extra-content">

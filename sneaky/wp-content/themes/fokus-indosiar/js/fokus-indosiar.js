@@ -57,6 +57,16 @@ var MainGallery = {
 };
 /** ********** /end ********** **/
 
+var Footer = {
+    init: function() {
+        var extraContent = $('.site-info-extra-content');
+        var extra = $('.site-info-extra');
+        extraContent.find('li:last-child').hover(function() {
+            extraContent.toggleClass('lastChildHovered');
+        })
+        
+    }
+}
 /** ********** Page Contstructor ********** **/
 var Page = {
 
@@ -67,6 +77,7 @@ var Page = {
         Page.toggleActive();
         Page.gallerySlick();
         Page.matchContentHeight();
+        Footer.init();
     },
     megamenuToggle: function() {
         var trigger = $('.menu-trigger');
@@ -93,8 +104,6 @@ var Page = {
     toggleActive: function(clickArea, injectedClass, targetArea) {
         // set default param: if targetArea is not defined then its the same as clickArea
         targetArea = clickArea || targetArea;
-        console.log(targetArea);
-        console.log(clickArea);
         $(clickArea).click(function() {
             $(targetArea).toggleClass(injectedClass);
         });
@@ -109,5 +118,14 @@ var Page = {
 
     Page.toggleActive('.site-info-extra', 'active');
 
+    // $('.site-info-extra ul li:last-child').hover(
+    //     function() {
+    //         $('.site-info-extra-content:after').css('border-top-color', '#72be4c');
+    //     },
+    //     function() {
+    //         $('.site-info-extra-content:after').css('border-top-color', '#fff');
+    //     }
+    // )
 
+    $('.site-info-extra-content:after').css('border-top', '10px solid #72be4c');
 })(jQuery);
