@@ -10,38 +10,24 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-			if ( is_single() ) {
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			} else {
-				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-			}
+	<div class="container">
 
-		if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php fokus_indosiar_posted_on(); ?>
-		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
-	</header><!-- .entry-header -->
+		<header class="entry-header">
+			<?php featured_img(); ?>
+			<h1><?php the_title(); ?></h1>
+			<div class="entry-meta">
+				<span class="item-meta"><?php fokus_indosiar_posted_on(); ?></span>
+				<span class="item-viewed"> - <?php echo wpb_get_post_views(get_the_ID()); ?></span>
+			</div>
+		</header><!-- .entry-header -->
 
-	<div class="entry-content">
-		<?php
-			the_content( sprintf(
-				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'fokus-indosiar' ), array( 'span' => array( 'class' => array() ) ) ),
-				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+		<div class="entry-content">
+			<?php the_content(); ?>
+		</div><!-- .entry-content -->
 
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'fokus-indosiar' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+		<footer class="entry-footer">
+			<?php //fokus_indosiar_entry_footer(); ?>
+		</footer><!-- .entry-footer -->
 
-	<footer class="entry-footer">
-		<?php fokus_indosiar_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	</div>
 </article><!-- #post-## -->
