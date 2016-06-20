@@ -14,7 +14,7 @@
 		<header class="section-header entry-header">
 			<div class="container">
 				<div class="breadcrumb spacepad-15">
-					<a href="#">
+					<a href="<?php echo home_url() . '/berita'; ?>">
 						<span><i class="fa fa-arrow-left">&nbsp;</i></span>
 						<span>Berita</span>
 					</a>

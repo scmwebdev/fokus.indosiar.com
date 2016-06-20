@@ -9,7 +9,6 @@ var pageHeader = {
         pageHeader.bindUIAction();
     },
     bindUIAction: function() {
-        // Utility.toggleActive('menu-trigger', 'body', 'active');
         var trigger = pageHeader.config.menuTrigger;
         trigger.click(function(event) {
             event.stopPropagation();

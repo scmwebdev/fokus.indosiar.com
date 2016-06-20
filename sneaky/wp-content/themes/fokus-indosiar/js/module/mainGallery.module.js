@@ -1,10 +1,10 @@
-
 /** ********** MainGallery Controller ********** **/
 var MainGallery = {
 
     init: function(settings) {
         MainGallery.config = {
             mainGallery: $('#main-gallery-desktop'),
+            mainGalleryMobile: $('#main-gallery-mobile'),
             galleryThumb: $('#gallery-thumb').find('.item-post__gallery-thumb'),
             firstChild: $('.content-theatre:first-child'),
         };
@@ -18,7 +18,7 @@ var MainGallery = {
             .find(MainGallery.config.firstChild)
             .addClass('active');
         MainGallery.calltoAction();
-
+        MainGallery.gallerySlick();
     },
     removeActive: function() {
         MainGallery.config.mainGallery
@@ -52,5 +52,13 @@ var MainGallery = {
             default:
                 MainGallery.config.galleryThumb.css('width', '20%');
         }
+    },
+    gallerySlick: function() {
+        var target = MainGallery.config.mainGalleryMobile;
+        target.slick({
+            autoplay: true,
+            autoplaySpeed: 4000,
+            draggable: true
+        });
     }
 };

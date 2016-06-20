@@ -53,8 +53,8 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
     return gulp.src([
-            // './node_modules/jquery/dist/jquery.js',
-            './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
+            './node_modules/jquery/dist/jquery.js',
+            // './node_modules/bootstrap-sass/assets/javascripts/bootstrap.js',
             './node_modules/fastclick/lib/fastclick.js',
             './node_modules/slick-carousel/slick/slick.js',
             './node_modules/jquery-match-height/dist/jquery.matchHeight.js',
