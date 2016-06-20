@@ -132,12 +132,20 @@ function fokus_indosiar_scripts() {
 
 	wp_enqueue_script( 'fokus-indosiar-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_register_script( 'vidio-embed', 'https://cdn0-a.production.vidio.static6.com/assets/javascripts/vidio-embed.js', array(), true); 
+    wp_enqueue_script('vidio-embed'); 
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'fokus_indosiar_scripts' );
 
+function load_vidio_embed_scripts() { 
+    wp_register_script( 'vidio-embed', 'https://cdn0-a.production.vidio.static6.com/assets/javascripts/vidio-embed.js', array(), true); 
+    wp_enqueue_script('vidio-embed'); 
+}
+// add_action( 'wp_enqueue_scripts', 'load_vidio_embed_scripts' );
 /**
  * Implement the Custom Header feature.
  */

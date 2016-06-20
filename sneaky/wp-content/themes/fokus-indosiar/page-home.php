@@ -25,9 +25,13 @@ get_header(); ?>
 					<div class="content-container post-list post-list-latest post-wrapper row">
 						<?php get_custom_post('post', 4, 6) ?>
 					</div>
-					<div class="load-more-btn">
-						<button type="button" class="btn btn-primary"><a class="next-link" href="">Load More</a></button>
+					<div class="container">
+						<iframe class="vidio-embed" src="https://www.vidio.com/embed/374280?autoplay=false&player_only=true&" scrolling="no" frameborder="0" allowfullscreen></iframe>
 					</div>
+					
+					<!-- <div class="load-more-btn">
+						<button type="button" class="btn btn-primary"><a class="next-link" href="">Load More</a></button>
+					</div> -->
 				</div>
 			</div>
 		</div>
