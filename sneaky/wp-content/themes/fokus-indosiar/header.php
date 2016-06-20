@@ -29,7 +29,7 @@
 	</div>
 	
 	<header id="masthead" class="site-header clearfix" role="banner">
-		<div class="<?php echo (is_mobile()) ? 'container' : 'container-fluid'; ?>	">
+		<div class="<?php echo (is_mobile()) ? 'container spacepad-15' : 'container-fluid'; ?>	">
 			<div class="site-branding">
 				<div class="logo-container">
 	                <h1>
@@ -38,7 +38,7 @@
 	                </h1>
 	            </div>
 			</div><!-- .site-branding -->
-			<div class="main-navigation__bar visible-xs clearfix menu-trigger">
+			<div class="main-navigation__bar visible-xs clearfix menu-trigger" id="site-menu-trigger">
 				<div class="bar bar-one"></div>
 				<div class="bar bar-two"></div>
 				<div class="bar bar-three"></div>

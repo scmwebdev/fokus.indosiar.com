@@ -6568,6 +6568,26 @@ var pageFooter = {
     }
 }
 
+var pageHeader = {
+    init: function(settings) {
+
+        pageHeader.config = {
+            menuTrigger: $('#site-menu-trigger')
+        };
+
+        $.extend(pageHeader.config, settings);
+        pageHeader.bindUIAction();
+    },
+    bindUIAction: function() {
+        // Utility.toggleActive('menu-trigger', 'body', 'active');
+        var trigger = pageHeader.config.menuTrigger;
+        trigger.click(function(event) {
+            event.stopPropagation();
+            $(this).closest('body').toggleClass('active');
+        })
+    }
+}
+
 var Utility = {
 
     toggleActive: function(clickArea, injectedClass, targetArea) {
@@ -6587,8 +6607,9 @@ var Page = {
     init: function() {
         console.log('Spirit Dreams Inside');
         FastClick.attach(document.body); //instantiate fastclick
+        pageHeader.init();
         MainGallery.init(); //setup the main banner on the frontpage
-        Page.toggleList();
+        // Page.toggleList();
         Page.gallerySlick();
         Page.matchContentHeight();
         pageFooter.init();
