@@ -32,6 +32,7 @@ footer {
             text-transform: uppercase;
             position: relative;
             @include transition(.2s);
+
             > div {
                 display: inline;
                 float: right;
@@ -43,12 +44,14 @@ footer {
                 .site-info-extra-content {
                     top: -12em;
                     @include opacity(1);
+                    z-index: 9999;
                 }
             }
             &-content {
                 @include transition(.2s);
                 @include opacity(0);
                 @include card(3);
+                z-index: -999;
                 background-color: #fff;
                 position: absolute;
                 top: -20em;

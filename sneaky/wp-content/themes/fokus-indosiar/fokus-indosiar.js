@@ -6541,9 +6541,25 @@ var MainGallery = {
 };
 var pageFooter = {
     init: function() {
-    	pageFooter.extra();
+        pageFooter.bindUIAction();
     },
-    extra: function() {
+    bindUIAction: function() {
+
+        pageFooter.UIHover();
+
+        var target = $('.site-info-extra');
+        target.click(function(event) {
+            event.stopPropagation();
+            target.toggleClass('active');
+        })
+        $(window).click(function(event) {
+            event.stopPropagation();
+            if(target.hasClass('active')) {
+                target.removeClass('active')
+            }
+        })
+    },
+    UIHover: function() {
         var extraContent = $('.site-info-extra-content');
         var extra = $('.site-info-extra');
         extraContent.find('li:last-child').hover(function() {
@@ -6551,6 +6567,18 @@ var pageFooter = {
         })
     }
 }
+
+var Utility = {
+
+    toggleActive: function(clickArea, injectedClass, targetArea) {
+        // set default param: if targetArea is not defined then its the same as clickArea
+        targetArea = clickArea || targetArea;
+        $(clickArea).click(function() {
+            $(targetArea).toggleClass(injectedClass);
+        });
+    }
+
+};
 
 /* Fokus Indosiar JS */
 
@@ -6560,15 +6588,13 @@ var Page = {
         console.log('Spirit Dreams Inside');
         FastClick.attach(document.body); //instantiate fastclick
         MainGallery.init(); //setup the main banner on the frontpage
-        Page.toggleActive();
         Page.toggleList();
         Page.gallerySlick();
         Page.matchContentHeight();
         pageFooter.init();
     },
     toggleList: function() {
-        Page.toggleActive('menu-trigger', 'body', 'active');
-        Page.toggleActive('.site-info-extra', 'active');
+        Utility.toggleActive('menu-trigger', 'body', 'active');
     }, 
     gallerySlick: function() {
         $('#main-gallery-mobile').slick({
@@ -6585,22 +6611,13 @@ var Page = {
         $.each(classes, function(key, value) {
             $(value).matchHeight();
         });
-    },
-    toggleActive: function(clickArea, injectedClass, targetArea) {
-        // set default param: if targetArea is not defined then its the same as clickArea
-        targetArea = clickArea || targetArea;
-        $(clickArea).click(function() {
-            $(targetArea).toggleClass(injectedClass);
-        });
     }
+    
 };
 
 
 (function($) {
 
     Page.init(); //initiliaze the page
-    
-
-    
 
 })(jQuery);
