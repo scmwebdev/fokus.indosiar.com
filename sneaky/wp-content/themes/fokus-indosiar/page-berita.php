@@ -11,6 +11,7 @@ get_header(); ?>
 <div id="primary" class="content-area frontpage clearfix">
 	<main id="main" class="site-main" role="main">
 		<div class="<?php echo (is_mobile()) ? 'container' : 'container-fluid'; ?>">
+			<h1 class="col-xs-12"><?php the_title(); ?></h1>
 			<div class="post-wrapper">
 				<?php get_berita() ?>
 			</div>

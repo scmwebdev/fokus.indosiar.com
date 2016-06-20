@@ -13,11 +13,7 @@
 	<div class="item-post-thumb">
 		<a href="<?php echo get_permalink(); ?>">
 			<?php 
-
-				// echo $i == 0 ? 'first_row' : ($i == 4 ? 'last_row' : 'none');
-
 				(has_post_thumbnail() ? '' : is_mobile() ? the_post_thumbnail('mainBanner_xs') : the_post_thumbnail('video_thumb'));
-
 			?>
 		</a>
 	</div>

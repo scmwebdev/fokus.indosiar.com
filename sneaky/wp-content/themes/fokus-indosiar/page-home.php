@@ -20,10 +20,13 @@ get_header(); ?>
 				<?php } ?>
 			</div>
 			<div class="content">
-				<div class="container spacepad-15">
+				<div class="container-fluid spacepad-15">
 					<h2 class="segment-title uppercase"> Latest News</h2>
-					<div class="content-container post-list post-list-latest row">
+					<div class="content-container post-list post-list-latest post-wrapper row">
 						<?php get_custom_post('post', 4, 6) ?>
+					</div>
+					<div class="load-more-btn">
+						<button type="button" class="btn btn-primary"><a class="next-link" href="">Load More</a></button>
 					</div>
 				</div>
 			</div>

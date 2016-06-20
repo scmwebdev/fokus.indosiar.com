@@ -29,11 +29,11 @@
 	</div>
 	
 	<header id="masthead" class="site-header clearfix" role="banner">
-		<div class="<?php echo (is_mobile()) ? 'container spacepad-15' : 'container-fluid'; ?>	">
+		<div class="<?php echo (is_mobile()) ? 'container' : 'container-fluid'; ?> spacepad-5">
 			<div class="site-branding">
 				<div class="logo-container">
 	                <h1>
-	                    <a href="/"><img src="http://www.indosiar.com/assets/img/logo-indosiar.png" style="max-height: 70px;"></a>
+	                    <a href="<?php echo home_url(); ?>"><img src="http://www.indosiar.com/assets/img/logo-indosiar.png" style="max-height: 70px;"></a>
 	                    <span class="sr-only">Indosiar</span>
 	                </h1>
 	            </div>
