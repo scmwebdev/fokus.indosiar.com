@@ -6483,7 +6483,6 @@ if (typeof jQuery === 'undefined') {
 
 });
 
-/* Fokus Indosiar JS */
 
 /** ********** MainGallery Controller ********** **/
 var MainGallery = {
@@ -6540,36 +6539,37 @@ var MainGallery = {
         }
     }
 };
-/** ********** /end ********** **/
-
-var Footer = {
+var pageFooter = {
     init: function() {
+    	pageFooter.extra();
+    },
+    extra: function() {
         var extraContent = $('.site-info-extra-content');
         var extra = $('.site-info-extra');
         extraContent.find('li:last-child').hover(function() {
             extraContent.toggleClass('lastChildHovered');
         })
-        
     }
 }
-/** ********** Page Contstructor ********** **/
+
+/* Fokus Indosiar JS */
+
 var Page = {
 
     init: function() {
         console.log('Spirit Dreams Inside');
         FastClick.attach(document.body); //instantiate fastclick
-        Page.megamenuToggle();
+        MainGallery.init(); //setup the main banner on the frontpage
         Page.toggleActive();
+        Page.toggleList();
         Page.gallerySlick();
         Page.matchContentHeight();
-        Footer.init();
+        pageFooter.init();
     },
-    megamenuToggle: function() {
-        var trigger = $('.menu-trigger');
-        trigger.click(function() {
-            $('body').toggleClass('active');
-        });
-    },
+    toggleList: function() {
+        Page.toggleActive('menu-trigger', 'body', 'active');
+        Page.toggleActive('.site-info-extra', 'active');
+    }, 
     gallerySlick: function() {
         $('#main-gallery-mobile').slick({
             autoplay: true,
@@ -6599,18 +6599,8 @@ var Page = {
 (function($) {
 
     Page.init(); //initiliaze the page
-    MainGallery.init(); //setup the main banner on the frontpage
+    
 
-    Page.toggleActive('.site-info-extra', 'active');
+    
 
-    // $('.site-info-extra ul li:last-child').hover(
-    //     function() {
-    //         $('.site-info-extra-content:after').css('border-top-color', '#72be4c');
-    //     },
-    //     function() {
-    //         $('.site-info-extra-content:after').css('border-top-color', '#fff');
-    //     }
-    // )
-
-    $('.site-info-extra-content:after').css('border-top', '10px solid #72be4c');
 })(jQuery);

@@ -58,6 +58,7 @@ gulp.task('js', function() {
             './node_modules/fastclick/lib/fastclick.js',
             './node_modules/slick-carousel/slick/slick.js',
             './node_modules/jquery-match-height/dist/jquery.matchHeight.js',
+            path + '/js/module/*.js',
             path + '/js/fokus-indosiar.js',
         ])
         .pipe(concat('fokus-indosiar.js'))
