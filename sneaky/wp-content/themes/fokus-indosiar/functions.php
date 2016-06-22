@@ -669,27 +669,34 @@ function get_vidio() {
 
 class Vidio {
 
-	public $_vidio;
-	public $_vidioID;
+	public $vidio;
+	public $vidioID;
 
 	public function __construct($getVideo) {
 
-		// $getVideo = get_field('video_url');
-		$this->_vidio = $getVideo;
+		$this->vidio = $getVideo;
 	}
 
 	public function get_vidio_id() {
 
-		$video =  $this->_vidio;
+		$video =  $this->vidio;
 
 		$regEx = "/(?<=\watch\/)(.*?)(?=\-)/";
 
 		preg_match($regEx, $video, $matches);
 
-		$this->_vidioID = $matches[0];
+		return $this->vidioID = $matches[0];
+	}
 
-		echo $this->_vidioID;
+	public function clean_url() {
 
+		$target = $this->get_vidio_id();
+		$html  = '<div class="embed-responsive embed-responsive-16by9">';
+		$html .= '<iframe class="vidio-embed embed-responsive-item" src="https://www.vidio.com/embed/'.  $target .'?autoplay=true&player_only=true&"';
+		$html .= 'scrolling="no" frameborder="0" allowfullscreen></iframe>';
+		$html .= '</div>';
+
+		echo $html;
 	}
 }
 

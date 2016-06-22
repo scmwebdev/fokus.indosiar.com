@@ -22,8 +22,9 @@
 				<?php 
 					// featured_img(); 
 					$getVideo = get_field('video_url');
-					$vidio = new Vidio($getVideo);
-					$vidio->get_vidio_id();
+					$test = new Vidio($getVideo);
+					// $test->get_vidio_id();
+					$test->clean_url();
 				?>
 				
 				<div class="entry-header spacepad-15">
