@@ -1,10 +1,18 @@
 /** section style **/
+
+
 /* this style governs the inner structure of item-article */
 
 .section-item {
-	background-color: $color__segment__one;
+    background-color: $color__segment__one;
+    .breadcrumb {
+        font-size: 1.2em;
+    }
+    .widget {
+        margin: 0;
+    }
+}
 
-	.breadcrumb {
-		font-size: 1.2em;
-	}
+.entry-title {
+	margin: 0;
 }

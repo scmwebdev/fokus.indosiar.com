@@ -19,7 +19,10 @@ $getVideo = get_field('video_url');
 	<div class="item-post-desc">
 		<div class="item-post-title ">
 			<div class="title"><?php the_title(); ?></div>
-			<div class="item-post-date"><?php echo get_the_date(); ?></div>
+			<div class="item-post-date">
+				<span><?php echo get_the_date(); ?></span>
+				
+			</div>
 		</div>
 		<div class="item-post-text">
 			<?php the_excerpt(); ?>

@@ -14,7 +14,8 @@ var Page = {
         var classes = [
             '.item-post',
             '.gallery-col',
-            '.item-post-thumb'
+            '.item-post-thumb',
+            '.entry-meta > .column'
         ];
         $.each(classes, function(i, z) {
             $(classes[i]).matchHeight();

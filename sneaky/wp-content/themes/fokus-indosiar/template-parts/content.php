@@ -20,12 +20,24 @@
 					</a>
 				</div>
 				<?php featured_img(); ?>
-				<h1><?php the_title(); ?></h1>
-				<div class="entry-meta">
-					<span class="item-meta"><?php fokus_indosiar_posted_on(); ?></span>
-					<span class="item-viewed"> - <?php echo wpb_get_post_views(get_the_ID()); ?></span>
+				
+				<div class="entry-header spacepad-15">
+					<div class="column leftCol col-xs-10 no-spacepad-side">
+						<h1 class="entry-title"><?php the_title(); ?></h1>
+						<div class="entry-meta">
+							<span class="item-postedon"><?php fokus_indosiar_posted_on(); ?></span>
+							<span class="item-viewed"> - <?php echo wpb_get_post_views(get_the_ID()); ?></span>
+						</div>
+					</div>
+					<div class="column rightCol item-social col-xs-2">
+						<?php dynamic_sidebar( 'social-media' ); ?>
+					</div>
 				</div>
+				
+
 			</div>
+
+			
 		</header><!-- .entry-header -->
 
 		<div class="section-content entry-content">
