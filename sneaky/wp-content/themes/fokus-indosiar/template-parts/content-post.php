@@ -13,24 +13,7 @@ $getVideo = get_field('video_url');
 <div class="item-post spacepad-15 col-xs-12 col-sm-4">
 	<div class="item-post-thumb">
 		<a href="<?php echo get_permalink(); ?>">
-
-			<?php 
-
-				if($getVideo) {
-					echo '<div class="embed-responsive embed-responsive-16by9">';
-					echo get_vidio();
-					echo '</div>';
-				} else {
-
-					if(is_mobile()) {
-						the_post_thumbnail('mainBanner_xs', array( 'class' => 'img-responsive imgTest'));
-					} else {
-						the_post_thumbnail('video_thumb', array( 'class' => 'img-responsive imgTest'));
-					}
-					
-				}
-					
-			?>
+		<?php featured_img() ?>
 		</a>
 	</div>
 	<div class="item-post-desc">

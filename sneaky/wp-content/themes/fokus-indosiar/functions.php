@@ -586,13 +586,29 @@ function top_stories_thumb() {
  * ================================================================== */
 
 function featured_img() {
-	if(has_post_thumbnail()) {
-		if(is_mobile()) {
-			the_post_thumbnail('mainBanner_xs', array('class' => 'img-responsive'));
-		} else {
-			the_post_thumbnail('mainBanner_lg', array('class' => 'img-responsive'));
+
+	$getVideo = get_field('video_url');
+
+	if($getVideo) {
+
+		$html .= '<div class="embed-responsive embed-responsive-16by9">';
+		$html .= get_vidio();
+		$html .= '</div>';
+
+		echo $html;
+
+	} else {
+
+		if(has_post_thumbnail()) {
+			if(is_mobile()) {
+				the_post_thumbnail('mainBanner_xs', array('class' => 'img-responsive'));
+			} else {
+				the_post_thumbnail('mainBanner_lg', array('class' => 'img-responsive'));
+			}
 		}
+		
 	}
+
 }
 
 function get_berita() {
