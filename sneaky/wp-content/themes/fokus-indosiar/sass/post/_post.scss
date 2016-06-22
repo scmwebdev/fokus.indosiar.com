@@ -25,3 +25,12 @@
 }
 
 @import 'section';
+
+.item-post-thumb {
+    max-height: 244px;
+    overflow: hidden;
+
+    iframe.vidio-embed {
+        pointer-events: none;
+    }
+}

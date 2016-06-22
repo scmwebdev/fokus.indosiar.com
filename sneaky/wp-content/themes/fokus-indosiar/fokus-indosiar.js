@@ -14297,10 +14297,17 @@ var Page = {
     matchContentHeight: function() {
         var classes = [
             '.item-post',
-            '.gallery-col'
+            '.gallery-col',
+            '.item-post-thumb'
         ];
         $.each(classes, function(i, z) {
             $(classes[i]).matchHeight();
+        });
+    },
+    vidio: function() {
+        var vidio = $('.vidio-embed');
+        vidio.addClass('embed-responsive-item').click(function(event) {
+            event.preventDefault();
         });
     }
 };

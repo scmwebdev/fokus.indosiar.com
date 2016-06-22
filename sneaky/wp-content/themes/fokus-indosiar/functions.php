@@ -179,7 +179,7 @@ add_image_size( 'mainBanner_lg', 1200, 800, hard);
 // add_image_size( 'mainBanner_md', 992, 400, true);
 add_image_size( 'mainBanner_xs', 600, 600, true);
 add_image_size( 'mainBanner_thumb', 400, 150, hard);
-add_image_size( 'video_thumb', 600, 250, hard);
+add_image_size( 'video_thumb', 600, 350, hard);
 add_image_size( 'article_thumb', 250, 250, hard);
 add_image_size( 'logo', 200, 200, hard);
 
@@ -622,6 +622,22 @@ function get_berita() {
 
 	// Restore original Post Data
 	wp_reset_postdata();
+}
+
+function get_vidio() {
+	//grab the vidio url
+	$getVideo = get_field('video_url');
+
+	// remove width=* and height=*
+	$removeWidthHeight = preg_replace('/(width)="\d+" (height)="\d+"/', "", $getVideo);
+
+	//remove script tags
+	$removeScript = preg_replace('/<script(.*?)>(.*?)<\/script>/', "", $removeWidthHeight);
+
+	//set player only to TRUE
+	$video = str_replace('player_only=false', 'player_only=true', $removeScript);
+
+	return $video;
 }
 
 /* ==================================================================

@@ -7,6 +7,7 @@
  * @package Fokus_Indosiar
  */
 
+$getVideo = get_field('video_url');
 ?>
 
 <div class="item-post spacepad-15 col-xs-12 col-sm-4">
@@ -15,31 +16,20 @@
 
 			<?php 
 
-				if(is_mobile()) {
-					the_post_thumbnail('mainBanner_xs');
+				if($getVideo) {
+					echo '<div class="embed-responsive embed-responsive-16by9">';
+					echo get_vidio();
+					echo '</div>';
 				} else {
-					the_post_thumbnail('video_thumb');
-				};
 
-			// $getVideo = get_field('video_url');
-			// $video = str_replace('player_only=false', 'player_only=true', $getVideo);
-			// if($video) {
-			// 	echo $video;
-			// } else {
-			// 	the_post_thumbnail('video_thumb');
-			// }
-			// if(!$videoURL) {
-
-			// 	if(is_mobile()) {
-			// 		the_post_thumbnail('mainBanner_xs')
-			// 	} else {
-			// 		the_post_thumbnail('video_thumb'))
-			// 	};
-			// 	// (has_post_thumbnail() ? '' : is_mobile() ? the_post_thumbnail('mainBanner_xs') : ;
-			// } else {
-				
-			// 	echo $videoURL;
-			// }
+					if(is_mobile()) {
+						the_post_thumbnail('mainBanner_xs', array( 'class' => 'img-responsive imgTest'));
+					} else {
+						the_post_thumbnail('video_thumb', array( 'class' => 'img-responsive imgTest'));
+					}
+					
+				}
+					
 			?>
 		</a>
 	</div>
