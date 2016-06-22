@@ -606,7 +606,7 @@ function featured_img() {
 				the_post_thumbnail('mainBanner_lg', array('class' => 'img-responsive'));
 			}
 		}
-		
+
 	}
 
 }

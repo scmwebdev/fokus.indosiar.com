@@ -1,8 +1,7 @@
 /* Post Styling */
 
 .item-post {
-
-	/** gallery thumb on the frontpage **/
+    /** gallery thumb on the frontpage **/
     &__gallery-thumb {
         float: left;
         cursor: pointer;
@@ -14,12 +13,11 @@
             @include filter(brightness, 100%);
         }
     }
-
     &-title {
         text-transform: capitalize;
         .title {
-        	@include spacemar(5px);
-        	font-size: 1.5em;
+            @include spacemar(5px);
+            font-size: 1.5em;
         }
     }
 }
@@ -29,7 +27,14 @@
 .item-post-thumb {
     max-height: 244px;
     overflow: hidden;
-
+    img,iframe {
+        @include transition(.4s);
+    }
+    &:hover {
+        img,iframe {
+            @include filter(invert, 20%);
+        }
+    }
     iframe.vidio-embed {
         pointer-events: none;
     }
