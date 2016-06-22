@@ -19,7 +19,12 @@
 						<span>Berita</span>
 					</a>
 				</div>
-				<?php featured_img(); ?>
+				<?php 
+					// featured_img(); 
+					$getVideo = get_field('video_url');
+					$vidio = new Vidio($getVideo);
+					$vidio->get_vidio_id();
+				?>
 				
 				<div class="entry-header spacepad-15">
 					<div class="column leftCol col-xs-10 no-spacepad-side">

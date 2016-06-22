@@ -649,9 +649,11 @@ function get_berita() {
 	wp_reset_postdata();
 }
 
+
+
 function get_vidio() {
-	//grab the vidio url
-	$getVideo = get_field('video_url');
+
+	$getVideo = get_field('video_url'); 
 
 	// remove width=* and height=*
 	$removeWidthHeight = preg_replace('/(width)="\d+" (height)="\d+"/', "", $getVideo);
@@ -663,6 +665,32 @@ function get_vidio() {
 	$video = str_replace('player_only=false', 'player_only=true', $removeScript);
 
 	return $video;
+}
+
+class Vidio {
+
+	public $_vidio;
+	public $_vidioID;
+
+	public function __construct($getVideo) {
+
+		// $getVideo = get_field('video_url');
+		$this->_vidio = $getVideo;
+	}
+
+	public function get_vidio_id() {
+
+		$video =  $this->_vidio;
+
+		$regEx = "/(?<=\watch\/)(.*?)(?=\-)/";
+
+		preg_match($regEx, $video, $matches);
+
+		$this->_vidioID = $matches[0];
+
+		echo $this->_vidioID;
+
+	}
 }
 
 /* ==================================================================

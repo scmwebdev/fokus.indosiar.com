@@ -13,7 +13,10 @@ $getVideo = get_field('video_url');
 <div class="item-post spacepad-15 col-xs-12 col-sm-4">
 	<div class="item-post-thumb">
 		<a href="<?php echo get_permalink(); ?>">
-		<?php featured_img() ?>
+		<?php 
+			featured_img();
+			
+		?>
 		</a>
 	</div>
 	<div class="item-post-desc">
