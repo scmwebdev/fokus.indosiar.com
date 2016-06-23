@@ -14,17 +14,15 @@ get_header(); ?>
 			<div id="main-gallery-<?php echo (is_mobile()) ? 'mobile' : 'desktop' ?>" class="content-header clearfix item-post">
 				<?php
 
-					$post = new TopStories();
-					$post->fetch_post('top_stories', 'yes', 'header');
+					$mainGallery = new TopStories();
+					$mainGallery->fetch_post('top_stories', 'yes', 'frontpage', 'header');
 
 				?>
 				<?php if (!is_mobile()) { ?>
 				<div class="list-thumb clearfix" id="gallery-thumb">
 					<?php
-
-						$post = new TopStories();
-						$post->fetch_post('top_stories', 'yes', 'headerthumbnails');
-						
+						$mainGalleryThumb = new TopStories();
+						$mainGalleryThumb->fetch_post('top_stories', 'yes', 'frontpage', 'headerthumbnails');
 					?>
 				</div>
 				<?php } ?>

@@ -18,16 +18,13 @@ class Item {
 	protected $_templatePost;
 	protected $_maxPostMobile;
 	protected $_maxPostDesktop;
-	// public $_categoryPost;
 
 	public function __construct($template, $mobilePost, $desktopPost) {
 
 		$this->_templatePost 	= $template;
 		$this->_maxPostMobile 	= $mobilePost;
 		$this->_maxPostDesktop 	= $desktopPost;
-		// $this->_categoryPost = $category;
 
-		// echo 'this is item constructor';
 	}
 
 	public function post_per_page() {
@@ -91,7 +88,7 @@ class Item {
 			echo 'no posts found';
 		}
 
-		// // Restore original Post Data
+		// Restore original Post Data
 		wp_reset_postdata();
 
 	}
@@ -100,7 +97,7 @@ class Item {
 
 class TopStories extends Item {
 
-	public function fetch_post($key, $keyValue, $templatePath) {
+	public function fetch_post($key, $keyValue, $tempPathFront = 'content', $tempPathEnd) {
 
 		$postPerPage = $this->post_per_page();
 
@@ -124,7 +121,7 @@ class TopStories extends Item {
 		if ( $query->have_posts() ) {
 			while ( $query->have_posts() ) {
 				$query->the_post();
-				get_template_part('template-parts/frontpage', $templatePath);
+				get_template_part('template-parts/'. $tempPathFront, $tempPathEnd);
 			}
 		} else {
 			// no posts found

@@ -524,7 +524,6 @@ function get_custom_post($template, $minPost, $maxPost, $key, $keyValue,  $order
 }
 
 
-
 /* ==================================================================
  * Post Related Functions
  * ================================================================== */
