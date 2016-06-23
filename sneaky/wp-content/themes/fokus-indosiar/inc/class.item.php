@@ -42,13 +42,38 @@ class Item {
 		return $this->_maxPost = $max_post;
 	}
 
-	public function fetch_post() {
+	public function latest_post() {
 
 		$args = array(
 			'post_status' 	 => array( 'publish' ),
 			'order'			 => 'DESC',
 			'post_type'		 => 'post',
 			'posts_per_page' => $this->_maxPost,
+		);
+
+		$query = new WP_Query( $args );
+		if ( $query->have_posts() ) {
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				get_template_part('template-parts/content', $this->_templatePost);
+			}
+		} else {
+			echo 'no posts found';
+		}
+
+		// // Restore original Post Data
+		wp_reset_postdata();
+
+	}
+
+	public function fetch_post($category = '2') {
+
+		$args = array(
+			'post_status' 	 => array( 'publish' ),
+			'order'			 => 'DESC',
+			'post_type'		 => 'post',
+			'posts_per_page' => $this->_maxPost,
+			'cat'			 =>	$category
 		);
 
 		$query = new WP_Query( $args );
