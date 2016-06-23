@@ -7,6 +7,9 @@
  * @package Fokus_Indosiar
  */
 
+include('inc/class.vidio.php');
+include('inc/class.item.php');
+
 if ( ! function_exists( 'fokus_indosiar_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -600,11 +603,8 @@ function featured_img() {
 
 	if($getVideo) {
 
-		$html .= '<div class="embed-responsive embed-responsive-16by9">';
-		$html .= get_vidio();
-		$html .= '</div>';
-
-		echo $html;
+		$vidio = new Vidio($getVideo);
+		$vidio->clean_url();
 
 	} else {
 
@@ -649,56 +649,6 @@ function get_berita() {
 	wp_reset_postdata();
 }
 
-
-
-function get_vidio() {
-
-	$getVideo = get_field('video_url'); 
-
-	// remove width=* and height=*
-	$removeWidthHeight = preg_replace('/(width)="\d+" (height)="\d+"/', "", $getVideo);
-
-	//remove script tags
-	$removeScript = preg_replace('/<script(.*?)>(.*?)<\/script>/', "", $removeWidthHeight);
-
-	//set player only to TRUE
-	$video = str_replace('player_only=false', 'player_only=true', $removeScript);
-
-	return $video;
-}
-
-class Vidio {
-
-	public $vidio;
-	public $vidioID;
-
-	public function __construct($getVideo) {
-
-		$this->vidio = $getVideo;
-	}
-
-	public function get_vidio_id() {
-
-		$video =  $this->vidio;
-
-		$regEx = "/(?<=\watch\/)(.*?)(?=\-)/";
-
-		preg_match($regEx, $video, $matches);
-
-		return $this->vidioID = $matches[0];
-	}
-
-	public function clean_url() {
-
-		$target = $this->get_vidio_id();
-		$html  = '<div class="embed-responsive embed-responsive-16by9">';
-		$html .= '<iframe class="vidio-embed embed-responsive-item" src="https://www.vidio.com/embed/'.  $target .'?autoplay=true&player_only=true&"';
-		$html .= 'scrolling="no" frameborder="0" allowfullscreen></iframe>';
-		$html .= '</div>';
-
-		echo $html;
-	}
-}
 
 /* ==================================================================
  * WP REST APi CUSTOM
