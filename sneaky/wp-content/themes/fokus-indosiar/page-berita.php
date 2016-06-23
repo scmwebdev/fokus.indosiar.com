@@ -13,7 +13,12 @@ get_header(); ?>
 		<div class="<?php echo (is_mobile()) ? 'container' : 'container-fluid'; ?>">
 			<h1 class="col-xs-12"><?php the_title(); ?></h1>
 			<div class="post-wrapper">
-				<?php get_berita() ?>
+				<?php 
+
+					$beritaPost = new Item('post', 4, 6);
+					$beritaPost->fetch_post();
+
+				?>
 			</div>
 		</div>
 	</main>

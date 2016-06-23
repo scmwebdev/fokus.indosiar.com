@@ -14,10 +14,10 @@
 
 class Item {
 
-	public $_maxPost;
-	public $_templatePost;
-	public $_maxPostMobile;
-	public $_maxPostDesktop;
+	protected $_maxPost;
+	protected $_templatePost;
+	protected $_maxPostMobile;
+	protected $_maxPostDesktop;
 	// public $_categoryPost;
 
 	public function __construct($template, $mobilePost, $desktopPost) {
@@ -27,6 +27,7 @@ class Item {
 		$this->_maxPostDesktop 	= $desktopPost;
 		// $this->_categoryPost = $category;
 
+		// echo 'this is item constructor';
 	}
 
 	public function post_per_page() {
@@ -44,11 +45,13 @@ class Item {
 
 	public function latest_post() {
 
+		$postPerPage = $this->post_per_page();
+
 		$args = array(
 			'post_status' 	 => array( 'publish' ),
 			'order'			 => 'DESC',
 			'post_type'		 => 'post',
-			'posts_per_page' => $this->_maxPost,
+			'posts_per_page' => $postPerPage,
 		);
 
 		$query = new WP_Query( $args );
@@ -68,11 +71,13 @@ class Item {
 
 	public function fetch_post($category = '2') {
 
+		$postPerPage = $this->post_per_page();
+
 		$args = array(
 			'post_status' 	 => array( 'publish' ),
 			'order'			 => 'DESC',
 			'post_type'		 => 'post',
-			'posts_per_page' => $this->_maxPost,
+			'posts_per_page' => $postPerPage,
 			'cat'			 =>	$category
 		);
 
@@ -87,6 +92,46 @@ class Item {
 		}
 
 		// // Restore original Post Data
+		wp_reset_postdata();
+
+	}
+
+}
+
+class TopStories extends Item {
+
+	public function fetch_post($key, $keyValue, $templatePath) {
+
+		$postPerPage = $this->post_per_page();
+
+		$args = array (
+			'post_status'            => array( 'publish' ),
+			'order'                  => 'DESC',
+			'post_type' 			 => 'post',
+			'posts_per_page' 		 => $postPerPage,
+			'meta_query' => array(
+				array(
+					'key'       => $key,
+					'value'     => $keyValue,
+				),
+			),
+		);
+
+		// The Query
+		$query = new WP_Query( $args );
+
+		// The Loop
+		if ( $query->have_posts() ) {
+			while ( $query->have_posts() ) {
+				$query->the_post();
+				get_template_part('template-parts/frontpage', $templatePath);
+			}
+		} else {
+			// no posts found
+			echo 'no posts found';
+		}
+
+		// Restore original Post Data
 		wp_reset_postdata();
 
 	}

@@ -12,10 +12,20 @@ get_header(); ?>
 	<main id="main" class="site-main" role="main">
 		<div class="container-fluid no-spacepad-side">
 			<div id="main-gallery-<?php echo (is_mobile()) ? 'mobile' : 'desktop' ?>" class="content-header clearfix item-post">
-				<?php top_stories(); ?>
+				<?php
+
+					$post = new TopStories();
+					$post->fetch_post('top_stories', 'yes', 'header');
+
+				?>
 				<?php if (!is_mobile()) { ?>
 				<div class="list-thumb clearfix" id="gallery-thumb">
-					<?php top_stories_thumb(); ?>
+					<?php
+
+						$post = new TopStories();
+						$post->fetch_post('top_stories', 'yes', 'headerthumbnails');
+						
+					?>
 				</div>
 				<?php } ?>
 			</div>
@@ -26,7 +36,7 @@ get_header(); ?>
 						<?php 
 
 							$latestPost = new Item('post', 4, 6);
-							$latestPost->fetch_post();
+							$latestPost->latest_post();
 
 						?>
 					</div>					

@@ -523,74 +523,6 @@ function get_custom_post($template, $minPost, $maxPost, $key, $keyValue,  $order
 	wp_reset_postdata();
 }
 
-function top_stories() {
-
-	// set the min and max of posts and store it in a var
-	$post_per_page = max_post($minPost, $maxPost);
-	$args = array (
-		'post_status'            => array( 'publish' ),
-		'order'                  => 'DESC',
-		'post_type' 			 => 'post',
-		'posts_per_page' 		 => $post_per_page,
-		'meta_query' => array(
-			array(
-				'key'       => 'top_stories',
-				'value'     => 'yes',
-			),
-		),
-	);
-	// The Query
-	$query = new WP_Query( $args );
-
-	// The Loop
-	if ( $query->have_posts() ) {
-		while ( $query->have_posts() ) {
-			$query->the_post();
-			get_template_part('template-parts/frontpage', 'header');
-		}
-	} else {
-		// no posts found
-		echo 'no posts found';
-	}
-
-	// Restore original Post Data
-	wp_reset_postdata();
-}
-
-function top_stories_thumb() {
-
-	// set the min and max of posts and store it in a var
-	$post_per_page = max_post($minPost, $maxPost);
-	$args = array (
-		'post_status'            => array( 'publish' ),
-		'order'                  => 'DESC',
-		'post_type' 			 => 'post',
-		'posts_per_page' 		 => $post_per_page,
-		'meta_query' => array(
-			array(
-				'key'       => 'top_stories',
-				'value'     => 'yes',
-			),
-		),
-	);
-	// The Query
-	$query = new WP_Query( $args );
-
-	// The Loop
-	if ( $query->have_posts() ) {
-		while ( $query->have_posts() ) {
-			$query->the_post();
-			get_template_part('template-parts/frontpage', 'headerthumbnails');
-		}
-	} else {
-		// no posts found
-		echo 'no posts found';
-	}
-
-	// Restore original Post Data
-	wp_reset_postdata();
-}
-
 
 
 /* ==================================================================
@@ -618,35 +550,6 @@ function featured_img() {
 
 	}
 
-}
-
-function get_berita() {
-	// set the min and max of posts and store it in a var
-	$post_per_page = max_post($minPost, $maxPost);
-	$args = array (
-		'post_status'            => array( 'publish' ),
-		'cat'				 	 => '2',
-		'order'                  => 'DESC',
-		'post_type' 			 => 'post',
-		'posts_per_page' 		 => $post_per_page,
-	);
-
-	// The Query
-	$query = new WP_Query( $args );
-
-	// The Loop
-	if ( $query->have_posts() ) {
-		while ( $query->have_posts() ) {
-			$query->the_post();
-			get_template_part('template-parts/content', 'post');
-		}
-	} else {
-		// no posts found
-		echo 'no posts found';
-	}
-
-	// Restore original Post Data
-	wp_reset_postdata();
 }
 
 
