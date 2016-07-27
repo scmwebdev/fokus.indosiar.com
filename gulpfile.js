@@ -30,7 +30,7 @@ gulp.task('browserSync', function() {
     ];
 
     browserSync.init(files, {
-        proxy: "http://localhost:8888/fokus.indosiar.com/",
+        proxy: "http://localhost/fokus.indosiar.com/",
         notify: 'false'
     });
 });
