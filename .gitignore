@@ -1,7 +1,11 @@
 #List of ignored files
 
-#npm packages
+#ignore dev files
 node_modules/
+bower_components/
 
-#mac default files
+#ignore mac default files
 .DS_Store
+
+#ignore project asset files
+kitchen/
