@@ -1,0 +1,1223 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mobile",
+				"mobileMenuCloseBtn"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"Mob",
+				"mobileMenu"
+			],
+			[
+				"men",
+				"mobileMenu"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"parent",
+				"parentMenu"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"get_style",
+				"get_stylesheet_directory_uri"
+			],
+			[
+				"selec",
+				"selectElement"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"thumb",
+				"thumb_path"
+			],
+			[
+				"PATH",
+				"pathinfo"
+			],
+			[
+				"video",
+				"vidio_latest"
+			],
+			[
+				"vidio",
+				"vidio_latest"
+			],
+			[
+				"vidi",
+				"vidio_latest"
+			],
+			[
+				"show",
+				"showSchedule"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"banner",
+				"bannerArr"
+			],
+			[
+				"image",
+				"imageArr"
+			],
+			[
+				"im",
+				"images"
+			],
+			[
+				"attac",
+				"attachment"
+			],
+			[
+				"title",
+				"titleArr"
+			],
+			[
+				"get",
+				"get_title"
+			],
+			[
+				"slick",
+				"slickit"
+			],
+			[
+				"ac",
+				"activateUI"
+			],
+			[
+				"latest",
+				"latestContainer"
+			],
+			[
+				"toggle",
+				"toggleClass	.toggleClass()"
+			],
+			[
+				"sele",
+				"selectBanner"
+			],
+			[
+				"select",
+				"selectLatest"
+			],
+			[
+				"stop",
+				"stopPropagation"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"resu",
+				"resultID"
+			],
+			[
+				"appe",
+				"appendResult"
+			],
+			[
+				"person",
+				"PersonalityQuiz"
+			],
+			[
+				"resul",
+				"resultContainter"
+			],
+			[
+				"dis",
+				"displayResult"
+			],
+			[
+				"po",
+				"pointer-events"
+			],
+			[
+				"remove",
+				"removeClass	.removeClass()"
+			],
+			[
+				"add",
+				"addClass	.addClass()"
+			],
+			[
+				"submit",
+				"submitBtn"
+			],
+			[
+				"sub",
+				"submitBtn"
+			],
+			[
+				"data",
+				"data-score"
+			],
+			[
+				"item",
+				"itemChecked"
+			],
+			[
+				"tempPath",
+				"tempPathFront"
+			],
+			[
+				"max",
+				"max_post"
+			],
+			[
+				"remoe",
+				"removeClass	.removeClass()"
+			],
+			[
+				"has",
+				"hasClass	.hasClass()"
+			],
+			[
+				"mainBanner",
+				"mainBanner_xs"
+			],
+			[
+				"extra",
+				"extraContent"
+			],
+			[
+				"page",
+				"Page"
+			],
+			[
+				"click",
+				"clickArea"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"galler",
+				"gallery-thumb"
+			],
+			[
+				"remve",
+				"removeActive"
+			],
+			[
+				"main",
+				"MainBanner"
+			],
+			[
+				"first",
+				"firstChild"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"make",
+				"makeToggle"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"color",
+				"color_one_light"
+			],
+			[
+				"time",
+				"time_string"
+			],
+			[
+				"color__",
+				"color__highlight"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"func",
+				"func_num_args"
+			],
+			[
+				"fun",
+				"func_num_args"
+			],
+			[
+				"has_pos",
+				"has_post_thumbnail"
+			],
+			[
+				"re",
+				"relative"
+			],
+			[
+				"the_post_",
+				"the_post_thumbnail"
+			],
+			[
+				"get_template",
+				"get_template_part"
+			],
+			[
+				"menu",
+				"menuNav"
+			],
+			[
+				"bacou",
+				"background-color"
+			],
+			[
+				"nav",
+				"nav	<nav>"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"r",
+				"right"
+			],
+			[
+				"sta",
+				"start_min"
+			],
+			[
+				"star",
+				"startTime"
+			],
+			[
+				"_now",
+				"_nowString"
+			],
+			[
+				"next",
+				"next_post_url"
+			],
+			[
+				"get_the",
+				"get_the_category"
+			],
+			[
+				"getcaate",
+				"get_cat_name"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"the_pos",
+				"the_post_thumbnail"
+			],
+			[
+				"get_templat",
+				"get_template_part"
+			],
+			[
+				"pos",
+				"postThumb"
+			],
+			[
+				"quer",
+				"queried_post"
+			],
+			[
+				"backgro",
+				"background-color"
+			],
+			[
+				"underba",
+				"underbanner_1"
+			],
+			[
+				"em",
+				"employee"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"en",
+				"env_config"
+			],
+			[
+				"trans",
+				"transition"
+			],
+			[
+				"slice",
+				"slickSlider"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"syn php	",
+				"Set Syntax: PHP"
+			],
+			[
+				"syn scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"document",
+				"Snippet: $(document).ready"
+			],
+			[
+				"syn ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"wp",
+				"Snippet: wp_custom_loop"
+			],
+			[
+				"loop",
+				"Snippet: Google AJAX Libraries: Prototype"
+			],
+			[
+				"theloo",
+				"Snippet: The Loop"
+			],
+			[
+				"syn php",
+				"Set Syntax: PHP"
+			],
+			[
+				"syn javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"syn html",
+				"Set Syntax: HTML"
+			],
+			[
+				"button",
+				"Snippet: bs3-button-primary"
+			],
+			[
+				"syn json",
+				"Set Syntax: JSON"
+			],
+			[
+				"syn js",
+				"Set Syntax: JSON"
+			],
+			[
+				"html5",
+				"Snippet: html5"
+			],
+			[
+				"syn less",
+				"Set Syntax: Less"
+			],
+			[
+				"syn jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"bs3 nav",
+				"Snippet: bs3-navbar"
+			],
+			[
+				"syn m",
+				"Set Syntax: Markdown Extended"
+			],
+			[
+				"syn mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"button pr",
+				"Snippet: bs3-mini-button-primary"
+			],
+			[
+				"junm",
+				"Snippet: fluid_jumbotron"
+			],
+			[
+				"bs3 table",
+				"Snippet: bs3-table-responsive"
+			],
+			[
+				"form",
+				"Snippet: bs3-form"
+			],
+			[
+				"jumb",
+				"Snippet: fluid_jumbotron"
+			],
+			[
+				"jumn",
+				"Snippet: bs3-jumbotron"
+			],
+			[
+				"bs3 html",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"schemer",
+				"Schemr: List all schemes"
+			],
+			[
+				"them",
+				"Themr: List themes"
+			],
+			[
+				"sche",
+				"Schemr: List all schemes"
+			],
+			[
+				"themer",
+				"Themr: List themes"
+			],
+			[
+				"html5 ",
+				"Snippet: bs3-html5-template"
+			],
+			[
+				"sch",
+				"Schemr: List all schemes"
+			],
+			[
+				"bs3",
+				"Snippet: bs3-button"
+			],
+			[
+				"bs3 button",
+				"Snippet: bs3-button-primary"
+			],
+			[
+				"bs3 butt",
+				"Snippet: bs3-button-primary"
+			],
+			[
+				"syn javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"mark",
+				"Set Syntax: Markdown"
+			],
+			[
+				"butt",
+				"Snippet: bs3-button-primary"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"syn ",
+				"Set Syntax: PHP"
+			],
+			[
+				"syn sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"scher",
+				"Schemr: Next scheme"
+			],
+			[
+				"themr",
+				"Themr: Next theme"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"insall",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/scm/webdev/project/fokus.indosiar.com"
+	],
+	"file_history":
+	[
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/js/module/mainbanner.module.js",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/js/main.dev.js",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/js/module/header.module.js",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/layout/_header.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/layout/navigation/_menus.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/header.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/footer.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/section/masthead-mobile.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/layout/_footer.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/base/variables-site/_colors.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/utils/mixin/_mixins-master.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/utils/mixin/_spacing.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/inc/module/vidio.class.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/functions.php",
+		"/Users/scm/Dropbox/WEBTEAM/SCM WEB/account details.txt",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/layout/navigation/_navigation.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/utils/mixin/_misc.scss",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/footer.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/layout/_layout.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/components/elements/_elements.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/page/_frontpage.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/page-frontpage.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-includes/theme-compat/footer.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/js/navigation.js",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/section/masthead-desktop.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/base/variables-site/_links.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/js/module/personalityquiz.module.min.js",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/template-parts/content-video.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/page/_video-page.scss",
+		"/Users/scm/Dropbox/SCM WEB/account details.txt",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/page/_page.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/single.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/plugins/regenerate-thumbnails/regenerate-thumbnails.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/inc/class.vidio.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/inc/class.item.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/inc/module/mainbanner.class.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/gulpfile.js",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/plugins/smooth-slider/settings/settings.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/plugins/smooth-slider/smooth-slider.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/inc/module/class.Article.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/.gitignore",
+		"/Users/scm/webdev/template/theme_template/functions.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/main.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/functions.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/functions.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/header.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/js/module/personalityquiz.module.js",
+		"/Users/scm/.gitignore",
+		"/Users/scm/webdev/template/theme_template/README.md",
+		"/Users/scm/webdev/template/theme_template/package.json",
+		"/Users/scm/webdev/template/theme_template/gulpfile.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/sass/elements/_banner-ads.scss",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/page-home.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/inc/module/class.Banner.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/gulpfile.js",
+		"/Users/scm/webdev/template/theme_template/sass/style.scss",
+		"/Users/scm/webdev/project/wp_rest/CONTRIBUTING.md",
+		"/Users/scm/webdev/project/wp_rest/CHANGELOG.md",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/sass/page/_frontpage.scss",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/sass/elements/_elements.scss",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/js/module/pageMainBanner.module.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/js/module/utility.module.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/js/news-sctv.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/sass/page/_page.scss",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/template-parts/frontpage-mainbanner.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-includes/functions.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/gulpfile.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/template-parts/frontpage-latest.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/page-homexxx.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/.gitignore",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/env.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/env.php",
+		"/Users/scm/webdev/project/wp_rest/.htaccess",
+		"/Users/scm/webdev/project/wp_rest/wp-content/themes/twentysixteen/footer.php",
+		"/Users/scm/webdev/project/wp_rest/wp-content/themes/twentysixteen/js/functions.js",
+		"/Users/scm/webdev/project/wp_rest/wp-content/themes/twentysixteen/js/html5.js",
+		"/Users/scm/webdev/project/wp_rest/wp-config.php",
+		"/Users/scm/webdev/project/wp_rest/env.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/env.php",
+		"/Users/scm/webdev/project/hutsctv2/wp-content/themes/hutsctv/gulpfile.js",
+		"/Users/scm/webdev/project/hutsctv2/wp-config.php",
+		"/Users/scm/webdev/project/hutsctv2/env.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-config.php",
+		"/Users/scm/webdev/project/hutsctv2/wp-content/themes/hutsctv/package.json",
+		"/Users/scm/webdev/project/wp-rest-theme/package.json",
+		"/Users/scm/webdev/project/wp_template/wp-config.php",
+		"/Users/scm/webdev/project/wp-rest-theme/README.md",
+		"/Users/scm/webdev/project/wp-rest-theme/rest-theme/src/main.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-config.php",
+		"/Users/scm/webdev/project/wp_template/README.md",
+		"/Users/scm/webdev/project/wp_template/env.php",
+		"/Users/scm/Documents/scm_webanswer Joey. G. S/index.html",
+		"/Users/scm/Documents/scm_webanswer Joey. G. S/jScript.js",
+		"/Users/scm/webdev/scm_webtest/INSTRUCTIONS.md",
+		"/Users/scm/Documents/scm_webanswer Joey. G. S/style.css",
+		"/Users/scm/Documents/scm_webanswer Joey. G. S/jQuery.js",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/page-personality-quiz.php",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/json/sinetron.json",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/page/quiz-personality.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/json/personality.json",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/utils/mixin/_animation.scss",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/package.json",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/sage/package.json",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/node_modules/jquery-match-height/jquery.matchHeight.js",
+		"/Users/scm/webdev/project/hut.sctv.co.id/wp-content/themes/underscore/sass/utils/mixin/_keyframes.scss",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/js/module/pageHeader.module.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/inc/class.bannerads.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/class.bannerads.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/sass/navigation/_footer.scss",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/js/module/PageSlickCarousel.module.js",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/js/module/pageFooter.module.js",
+		"/private/var/mail/scm",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/template-parts/content-post.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/template-parts/content.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/sass/post/_post.scss",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/sass/post/_section.scss",
+		"/Users/scm/Library/Caches/TemporaryItems/Outlook Temp/Technical Test/css/animate.min.css",
+		"/Users/scm/Library/Caches/TemporaryItems/Outlook Temp/Technical Test/css/bootstrap.min.css",
+		"/Users/scm/Library/Caches/TemporaryItems/Outlook Temp/Technical Test/css/main.css",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/page-list.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/template-parts/frontpage-top.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/template-parts/frontpage-popular.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/template-parts/content-list.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/template-parts/content-page.php",
+		"/Users/scm/webdev/project/news.sctv.co.id/sneaky/wp-content/themes/news-sctv/template-parts/content.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/js/fokus-indosiar.js",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/page-berita.php",
+		"/Users/scm/webdev/project/fokus.indosiar.com/sneaky/wp-content/themes/fokus-indosiar/page-home.php"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 158.0,
+		"where_history":
+		[
+			"<current file>",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"display: none",
+			"display",
+			"menu-bar",
+			"$color__text",
+			"register",
+			"content",
+			"#content",
+			"sw",
+			"vidio",
+			"bootstrap",
+			"slickif",
+			"slik",
+			"main-banner",
+			"latest",
+			"long_banner_",
+			"long",
+			"template",
+			"get_template_part",
+			"data",
+			"appendResult",
+			"countScore",
+			"displayResult",
+			"finalScore",
+			"match",
+			"displayData",
+			"getData",
+			"container",
+			"quiz-container",
+			"quiz-content",
+			"container",
+			"quiz-container",
+			"countScore",
+			".contain",
+			"$",
+			"$.",
+			"$",
+			".result",
+			"$",
+			"$.",
+			"personaArr",
+			"jsonURL",
+			"evt",
+			"event",
+			"config",
+			"submitBtn",
+			"config",
+			"itemSelected",
+			"finalScore",
+			"finalScore0",
+			"total",
+			"featured",
+			"max_post",
+			"featured",
+			"wp_register_script",
+			"image",
+			"jquery",
+			"slick",
+			"site-menu",
+			"pageFooter",
+			"author",
+			"wpb_set_post_views",
+			"mainbanner",
+			"function",
+			".menu-active",
+			"MainBanner",
+			"galler",
+			"fast",
+			"page",
+			"site-menu",
+			"__no",
+			"__nodots",
+			"segment-content",
+			"segment",
+			"content",
+			"__spacepad",
+			".main-navigation li",
+			".main-navigati",
+			"li",
+			".main",
+			"ul",
+			".main-",
+			"#site",
+			"site-nav",
+			"__nomarginbottom",
+			"spacepad",
+			"no",
+			"border",
+			"transform",
+			"trans",
+			"pagina",
+			"child-menu",
+			"sub-menu",
+			".sub-menu",
+			"posted",
+			"post",
+			"posted",
+			"site-page-content",
+			"catego",
+			"related",
+			"format",
+			"date",
+			"$stats",
+			"stats",
+			"$stats",
+			"entry-title",
+			"custom_html",
+			"custom",
+			".site-m",
+			"box",
+			"top",
+			"custom",
+			"'",
+			"tags",
+			"yarrpp",
+			"posted",
+			"shado",
+			"padding",
+			"lip",
+			"/*",
+			"site-menu ",
+			"site-page",
+			".site-page-content",
+			"site-page",
+			"page",
+			"paged",
+			"li",
+			"zanarkan",
+			".fa"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"displayQuizResult",
+			"calculateScore",
+			"getQuizResult",
+			"submitQuiz",
+			"quizSubmit",
+			"",
+			"sinetronArr",
+			"sinetronJSON",
+			"pageHeader",
+			".active",
+			"MainGallery",
+			"nodots",
+			"spacepad-15",
+			"no-margin-bottom",
+			"\"",
+			"#site-page-content",
+			"less",
+			"'",
+			"$slug == 'calendar'",
+			"event",
+			"events",
+			"post",
+			"recent_events",
+			"site-menu",
+			"_inner",
+			"_icon",
+			"_inner",
+			"_icon",
+			"_bar",
+			"_inner",
+			"_icon",
+			"._icon",
+			"_outerCircle",
+			"_innerCircle",
+			"overall",
+			"src=\"'. $env_config['host'] .'"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 73.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "fokus_indosiar.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"main.dev",
+				"wp-content/themes/underscore/js/main.dev.js"
+			],
+			[
+				"_header",
+				"wp-content/themes/underscore/sass/layout/_header.scss"
+			],
+			[
+				"_footer",
+				"wp-content/themes/underscore/sass/layout/_footer.scss"
+			],
+			[
+				"_color",
+				"wp-content/themes/underscore/sass/base/variables-site/_colors.scss"
+			],
+			[
+				"function",
+				"wp-content/themes/underscore/functions.php"
+			],
+			[
+				"_navi",
+				"wp-content/themes/underscore/sass/layout/navigation/_navigation.scss"
+			],
+			[
+				"_nagi",
+				"wp-content/themes/underscore/sass/layout/navigation/_navigation.scss"
+			],
+			[
+				"funct",
+				"wp-content/themes/underscore/functions.php"
+			],
+			[
+				"header",
+				"wp-content/themes/underscore/header.php"
+			],
+			[
+				"footer",
+				"wp-content/themes/underscore/footer.php"
+			],
+			[
+				"footer.php",
+				"wp-includes/theme-compat/footer.php"
+			],
+			[
+				"_colors",
+				"wp-content/themes/underscore/sass/base/variables-site/_colors.scss"
+			],
+			[
+				"navigat",
+				"wp-content/themes/underscore/sass/layout/navigation/_navigation.scss"
+			],
+			[
+				"navi",
+				"wp-content/themes/underscore/js/navigation.js"
+			],
+			[
+				"front",
+				"wp-content/themes/underscore/sass/page/_frontpage.scss"
+			],
+			[
+				"func",
+				"wp-content/themes/underscore/functions.php"
+			],
+			[
+				"_link",
+				"wp-content/themes/underscore/sass/base/variables-site/_links.scss"
+			],
+			[
+				"regenere",
+				"wp-content/plugins/regenerate-thumbnails/regenerate-thumbnails.php"
+			],
+			[
+				"regenerate",
+				"wp-content/plugins/regenerate-thumbnails/regenerate-thumbnails.php"
+			],
+			[
+				"gulp",
+				"wp-content/themes/underscore/gulpfile.js"
+			],
+			[
+				"fun",
+				"wp-content/themes/underscore/functions.php"
+			],
+			[
+				"header.",
+				"wp-content/themes/underscore/header.php"
+			],
+			[
+				"gulpfi",
+				"wp-content/themes/underscore/gulpfile.js"
+			],
+			[
+				"functi",
+				"wp-content/themes/underscore/functions.php"
+			],
+			[
+				"functions.",
+				"sneaky/wp-content/themes/news-sctv/functions.php"
+			],
+			[
+				"functions.php",
+				"sneaky/wp-includes/functions.php"
+			],
+			[
+				"front-",
+				"sneaky/wp-content/themes/news-sctv/template-parts/frontpage-latest.php"
+			],
+			[
+				"_animati",
+				"wp-content/themes/underscore/sass/utils/mixin/_animation.scss"
+			],
+			[
+				"package",
+				"wp-content/themes/sage/package.json"
+			],
+			[
+				"match-height",
+				"wp-content/themes/underscore/node_modules/jquery-match-height/jquery.matchHeight.js"
+			],
+			[
+				"_eleme",
+				"wp-content/themes/underscore/sass/components/elements/_elements.scss"
+			],
+			[
+				".giti",
+				".gitignore"
+			],
+			[
+				".gitigno",
+				".gitignore"
+			],
+			[
+				"_animat",
+				"wp-content/themes/underscore/sass/utils/mixin/_animation.scss"
+			],
+			[
+				"_colro",
+				"wp-content/themes/underscore/sass/base/variables-site/_colors.scss"
+			],
+			[
+				"persona",
+				"wp-content/themes/underscore/sass/page/quiz-personality.scss"
+			],
+			[
+				"class.art",
+				"sneaky/wp-content/themes/news-sctv/inc/module/class.Article.php"
+			],
+			[
+				"maingalle",
+				"sneaky/wp-content/themes/fokus-indosiar/js/module/mainGallery.module.js"
+			],
+			[
+				"header.p",
+				"sneaky/wp-includes/theme-compat/header.php"
+			],
+			[
+				"utility",
+				"node_modules/lodash/utility.js"
+			],
+			[
+				"footer.js",
+				"sneaky/wp-content/themes/fokus-indosiar/js/module/pageFooter.js"
+			],
+			[
+				"footer.scss",
+				"sneaky/wp-content/themes/fokus-indosiar/sass/navigation/_footer.scss"
+			],
+			[
+				"frontpage",
+				"sneaky/wp-content/themes/fokus-indosiar/sass/page/_frontpage.scss"
+			],
+			[
+				"",
+				"gulpfile.js"
+			],
+			[
+				"test",
+				"backend/wp-content/themes/ParaPencariTuhan/node_modules/bootstrap-sass/test/test_helper.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/webdev/project/fokus.indosiar.com/fokus.indosiar.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 354.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 579.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 332.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
