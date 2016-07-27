@@ -1,28 +1,47 @@
-var pageFooter = {
-    init: function() {
-        pageFooter.bindUIAction();
-    },
-    bindUIAction: function() {
+var pageFooter = (function() {
 
-        pageFooter.UIHover();
+    var init = function() {
 
-        var target = $('.site-info-extra');
-        target.click(function(event) {
+        site_info(); //call site_info()
+
+    };
+
+    var site_info = function() {
+
+        //declare the variables
+        var extra = $('#extra');
+        var extra_content = $('.site-info-extra-content');
+
+        // when the site info extra is clicked add/remove class active
+        extra.on('click', function(event) {
             event.stopPropagation();
-            target.toggleClass('active');
-        })
-        $(window).click(function(event) {
+            $(this).toggleClass('active');
+        });
+
+        /** 
+         * when the window is clicked and if the content has the class 'active' 
+         * remove it
+         */
+        $(window).on('click', function(event) {
             event.stopPropagation();
-            if(target.hasClass('active')) {
-                target.removeClass('active')
+            if (extra.hasClass('active')) {
+                extra.removeClass('active');
             }
-        })
-    },
-    UIHover: function() {
-        var extraContent = $('.site-info-extra-content');
-        var extra = $('.site-info-extra');
-        extraContent.find('li:last-child').hover(function() {
-            extraContent.toggleClass('lastChildHovered');
-        })
-    }
-}
+        });
+
+        /**
+         * When the content is hovered, find the last child of the list and add
+         * the class 'lastChildHovered' on the parent.
+         * Output: this will highlight the triangle at the bottom
+         */
+        extra_content.find('li:last-child').hover(function() {
+            $(this).toggleClass('lastChildHovered');
+        });
+
+    };
+
+    return {
+        init: init,
+    };
+
+}());
